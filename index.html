@@ -4,349 +4,446 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aakash Sangani</title>
-  <meta name="description" content="Aakash Sangani — AI governance researcher, data scientist, and product builder. Auditable AI, ML and LLM systems, and AI products shipped for government, multilateral, and Fortune 100 clients.">
+  <meta name="description" content="Aakash Sangani builds AI systems and the instruments that hold them to account: AI governance research, ML and LLM systems, and AI products.">
   <meta property="og:title" content="Aakash Sangani">
-  <meta property="og:description" content="Auditable AI research, ML and LLM systems, and AI products — one portfolio, three lenses.">
+  <meta property="og:description" content="A working portfolio, marked up for three readers: researcher, data scientist, and product.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23161a1d'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23f4f1ea'%3EAS%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23fbfaf6'/%3E%3Crect x='6' y='34' width='52' height='16' fill='%23ffe45c' transform='rotate(-4 32 42)'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%23111'%3EAS%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body data-lens="all">
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="#top">Aakash Sangani</a>
-      <nav class="nav" aria-label="Sections">
-        <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#writing">Writing</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.4 5.4 0 0 1-9.54-4.9c-.2-2.02-.2-2.02.64-2.74Z"/></svg>
-      </button>
+  <header class="bar">
+    <div class="bar-inner">
+      <a class="bar-name" href="#top">Aakash Sangani</a>
+
+      <div class="lens" role="radiogroup" aria-label="Read this page as">
+        <span class="lens-label">Read as</span>
+        <button type="button" role="radio" data-lens-btn="all" aria-checked="true"><span class="lens-txt"><span class="long">Anyone</span><span class="short">Anyone</span></span></button>
+        <button type="button" role="radio" data-lens-btn="research" aria-checked="false"><span class="lens-txt"><span class="long">Researcher</span><span class="short">Research</span></span></button>
+        <button type="button" role="radio" data-lens-btn="data" aria-checked="false"><span class="lens-txt"><span class="long">Data scientist</span><span class="short">Data</span></span></button>
+        <button type="button" role="radio" data-lens-btn="product" aria-checked="false"><span class="lens-txt"><span class="long">Product &amp; strategy</span><span class="short">Product</span></span></button>
+      </div>
+
+      <div class="bar-tools">
+        <a class="cv" data-cv href="assets/resume/Aakash_Sangani_Research.pdf" download>CV <span aria-hidden="true">↓</span></a>
+        <button class="theme" type="button" aria-label="Switch between light and dark">
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="10" cy="10" r="7.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 2.75a7.25 7.25 0 0 1 0 14.5Z" fill="currentColor"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main id="main">
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="top">
-      <div class="wrap">
-        <p class="eyebrow">Mumbai, India · AI Consultant at Kalpa Impact</p>
-        <h1 class="hero-title">
-          <span data-for="all">Building AI that can be <em>audited</em>, measured, and shipped.</span>
-          <span data-for="research">Research on <em>auditable</em> and accountable AI systems.</span>
-          <span data-for="data">Data scientist for <em>ML and LLM</em> systems.</span>
-          <span data-for="product">Engineer by training. <em>Product and strategy</em> by practice.</span>
-        </h1>
+  <div class="doc">
+    <nav class="toc" aria-label="Contents">
+      <p class="toc-head">Contents</p>
+      <ol>
+        <li><a href="#top"><span>1</span>Abstract</a></li>
+        <li><a href="#work"><span>2</span>Selected work</a></li>
+        <li><a href="#experience"><span>3</span>Experience</a></li>
+        <li><a href="#publications"><span>4</span>Publications</a></li>
+        <li><a href="#education"><span>5</span>Education</a></li>
+        <li><a href="#index"><span>6</span>Index</a></li>
+        <li><a href="#correspondence"><span>7</span>Correspondence</a></li>
+      </ol>
+    </nav>
 
-        <div class="lens" role="tablist" aria-label="View this portfolio as">
-          <span class="lens-label">View as</span>
-          <button role="tab" data-lens-btn="all" aria-selected="true">Overview</button>
-          <button role="tab" data-lens-btn="research" aria-selected="false">Researcher</button>
-          <button role="tab" data-lens-btn="data" aria-selected="false">Data Scientist</button>
-          <button role="tab" data-lens-btn="product" aria-selected="false">Product &amp; Strategy</button>
-        </div>
+    <main id="main">
+      <!-- 1 · ABSTRACT -->
+      <section class="sec hero" id="top" aria-labelledby="name">
+        <p class="runhead">Working portfolio <span>·</span> rev. September 2026 <span>·</span> Mumbai</p>
+        <span class="num">1</span>
+        <div class="main">
+          <h1 id="name">Aakash Sangani</h1>
+          <p class="abstract">
+            I build AI systems, and the instruments that hold them to account. My work runs from
+            <mark data-for="research">inferring what deployed AI agents are actually optimising for</mark>,
+            through <mark data-for="data">modelling, evaluating, and debiasing ML and LLM systems</mark>,
+            to <mark data-for="product">shipping AI products for government, multilateral, and Fortune&nbsp;100 clients</mark>.
+          </p>
+          <p class="standfirst">
+            AI Consultant at Kalpa Impact, working on AI governance and digital public infrastructure with UNDP, DPGA, the Gates Foundation, and Co-Develop. Previously Senior Associate at ZS Associates and product analyst at Bright Money.
+          </p>
 
-        <div class="hero-body">
-          <div class="summary">
-            <p data-for="all">I work where machine learning meets accountability. Over 3+ years I've shipped an agentic analytics product for a Fortune 100 pharma client, run growth experiments at a fintech, and now consult on AI governance and digital public infrastructure for UNDP, the Gates Foundation, and India's Principal Scientific Adviser's Office. On the side I build open-source tools that audit AI systems.</p>
-            <p data-for="research">My research asks how we can hold deployed AI accountable. Current threads: inferring the <strong>revealed objectives</strong> of AI agents from their behaviour, <strong>algorithmic fairness</strong> in Indian credit markets, and <strong>conformity assessment and incident reporting</strong> under the EU AI Act and California's SB-53.</p>
-            <p data-for="data">Data scientist with 3+ years across pharma analytics, fintech experimentation, and AI governance. I build and evaluate ML and LLM systems, from Bayesian inference and fairness audits to agentic analytics products, and I'm the author of two open-source AI evaluation tools.</p>
-            <p data-for="product">B.Tech IT graduate with 3+ years in enterprise analytics, fintech growth, and AI governance consulting. I build and ship AI systems (RAG, MCP servers, agentic products) and own the product and strategy side too: requirements, product logic, and stakeholder work with government, multilateral, and Fortune 100 clients.</p>
-            <div class="cta-row">
-              <a class="btn btn-primary" data-resume href="assets/resume/Aakash_Sangani_Research.pdf" download>
-                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1ZM5 19h14a1 1 0 1 1 0 2H5a1 1 0 1 1 0-2Z"/></svg>
-                <span data-resume-label>Download CV</span>
-              </a>
-              <a class="btn" href="https://github.com/aakash2410" target="_blank" rel="noopener">GitHub</a>
-              <a class="btn" href="https://www.linkedin.com/in/aakash-sangani-3149a11a7" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
-          </div>
-
-          <dl class="stats">
-            <div data-for="all product data"><dt>3+ yrs</dt><dd>across pharma analytics, fintech, and AI governance</dd></div>
-            <div data-for="all research"><dt>3</dt><dd>open-source AI audit projects, one on PyPI</dd></div>
-            <div data-for="research"><dt>r = 0.55</dt><dd>open critic recovers planted objective divergence, vs 0.43 for a frontier LLM judge</dd></div>
-            <div data-for="research data"><dt>0.59</dt><dd>disparate impact in credit-market entry for female-headed households</dd></div>
-            <div data-for="data"><dt>0.82–0.85</dt><dd>LSTM accuracy on Big Five traits vs 0.45–0.61 baselines</dd></div>
-            <div data-for="all product data"><dt>Top 1%</dt><dd>performer firm-wide at ZS; promoted within 8–10 months</dd></div>
-            <div data-for="all product"><dt>$120K</dt><dd>acquisition cost saved by a referral programme in 5 months</dd></div>
-            <div data-for="product"><dt>100%</dt><dd>accuracy on incentive-comp logic for a Fortune 100 client</dd></div>
-            <div data-for="research"><dt>8.90</dt><dd>CGPA / 10, B.Tech IT on a full-tuition merit scholarship</dd></div>
+          <dl class="figures">
+            <div><dt><mark data-for="data product">3+</mark></dt><dd>years in industry: pharma analytics, fintech, AI governance</dd></div>
+            <div><dt><mark data-for="data product">Top 1%</mark></dt><dd>performer firm-wide at ZS, promoted in 8–10 months</dd></div>
+            <div><dt><mark data-for="product">$120K</mark></dt><dd>acquisition cost saved by a referral programme</dd></div>
+            <div><dt><mark data-for="research data">3</mark></dt><dd>open-source AI audit projects, one on PyPI</dd></div>
+            <div><dt><mark data-for="research">8.90</mark></dt><dd>CGPA out of 10, on a full-tuition merit scholarship</dd></div>
           </dl>
         </div>
-      </div>
-    </section>
 
-    <!-- ============ WORK ============ -->
-    <section class="section" id="work">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Selected work</h2>
-          <p class="section-note" data-for="all">Ordered for a general reader. Pick a lens above to reorder by what matters for that role.</p>
-          <p class="section-note" data-for="research">Ordered by research contribution.</p>
-          <p class="section-note" data-for="data">Ordered by modelling and evaluation depth.</p>
-          <p class="section-note" data-for="product">Ordered by what shipped and who uses it.</p>
+        <aside class="notes">
+          <p class="note" data-for="all"><b>How to read this page.</b> Pick a reader in the bar above. The text stays the same. What changes is what gets highlighted, the notes in this margin, the order of the work, and which CV you download.</p>
+          <p class="note" data-for="research"><b>Marked for a researcher.</b> Current threads: the revealed objectives of AI agents; algorithmic fairness in Indian credit markets; conformity assessment and incident reporting under the EU AI Act and California's SB-53.</p>
+          <p class="note" data-for="data"><b>Marked for a data scientist.</b> Three-plus years across pharma analytics, fintech experimentation, and AI governance. Author of two open-source AI evaluation tools.</p>
+          <p class="note" data-for="product"><b>Marked for product &amp; strategy.</b> Owns requirements, product logic, and stakeholder work with government, multilateral, and Fortune&nbsp;100 clients. Led a team of four at ZS.</p>
+          <p class="note-actions">
+            <a data-cv href="assets/resume/Aakash_Sangani_Research.pdf" download><span data-cv-label>Download CV</span> ↓</a>
+            <button type="button" class="share" data-for="research data product">Copy link to this reading</button>
+          </p>
+        </aside>
+      </section>
+
+      <!-- 2 · WORK -->
+      <section class="sec" id="work" aria-labelledby="h-work">
+        <span class="num">2</span>
+        <div class="main sec-head">
+          <h2 id="h-work">Selected work</h2>
+          <p class="sec-sub" data-for="all">In rough order of significance.</p>
+          <p class="sec-sub" data-for="research">Reordered by research contribution.</p>
+          <p class="sec-sub" data-for="data">Reordered by modelling and evaluation depth.</p>
+          <p class="sec-sub" data-for="product">Reordered by what shipped, and for whom.</p>
         </div>
 
-        <div class="projects">
-          <article class="project featured" data-rank-all="1" data-rank-research="1" data-rank-data="1" data-rank-product="2">
-            <div class="project-top">
-              <span class="kicker">AI safety · Research system</span>
-              <a class="repo" href="https://github.com/aakash2410/Inverse-Objective-Regulator" target="_blank" rel="noopener" aria-label="Inverse-Objective Regulator on GitHub">Repo ↗</a>
+        <div class="entries" data-sortable data-prefix="2">
+          <!-- IOR -->
+          <article class="entry" id="ior" data-rank-all="1" data-rank-research="1" data-rank-data="1" data-rank-product="2">
+            <span class="num entry-num">2.1</span>
+            <div class="main">
+              <h3>Inverse-Objective Regulator</h3>
+              <p class="meta">Research system · Sole author · <a href="https://github.com/aakash2410/Inverse-Objective-Regulator" target="_blank" rel="noopener">Source ↗</a></p>
+              <p>A black-box auditor that works out what a deployed AI agent is <em>actually</em> optimising for, using only its tool-call traces. <mark data-for="research data">Bayesian inverse reinforcement learning</mark> recovers the agent's revealed objective and scores how far it drifts from its declared purpose. The output is <mark data-for="product">evidence a regulator can read</mark>, mapped to the EU AI Act, OWASP, MITRE ATLAS, and NIST AI RMF and emitted as JSON and SARIF.</p>
+              <p>It ships with <mark data-for="research">an open 8-agent benchmark</mark> of agentic failure modes: reward hacking, power-seeking, sycophancy, privacy leakage, and safety-skipping.</p>
+
+              <figure class="fig">
+                <div class="plot" role="img" aria-label="Mean correlation with planted objective divergence. Frontier LLM-as-judge ranges from 0.08 to 0.43. Open cross-encoder critic: 0.55.">
+                  <div class="row"><span class="lab">Frontier LLM-as-judge</span><span class="track"><i class="seg" style="--a:.08;--b:.43"></i><b class="val" style="--x:.43">0.08 → 0.43</b></span></div>
+                  <div class="row key"><span class="lab">Open cross-encoder critic</span><span class="track"><i class="dot" style="--x:.55"></i><b class="val" style="--x:.55">0.55</b></span></div>
+                  <div class="row axis"><span class="lab">mean r</span><span class="track"><i style="--x:0">0</i><i style="--x:.25">.25</i><i style="--x:.5">.50</i><i style="--x:.75">.75</i><i style="--x:1">1</i></span></div>
+                </div>
+                <figcaption>Correlation with planted objective divergence across the benchmark. The critic recovers divergence in <mark data-for="data">6 of 8 agents, deterministically and with no API cost</mark>.</figcaption>
+              </figure>
             </div>
-            <h3>Inverse-Objective Regulator</h3>
-            <p class="lede">A black-box auditor that infers what a deployed AI agent is <em>actually</em> optimising for, from its tool-call traces alone.</p>
-            <ul class="points">
-              <li>Bayesian inverse reinforcement learning recovers the agent's revealed objective and scores its divergence from the declared purpose.</li>
-              <li>Emits regulator-legible evidence mapped to the EU AI Act, OWASP, MITRE ATLAS, and NIST AI RMF, as JSON and SARIF.</li>
-              <li>Open 8-agent benchmark covering reward hacking, power-seeking, sycophancy, privacy leakage, and safety-skipping.</li>
-            </ul>
-            <div class="result">
-              <div class="bars" aria-label="Mean correlation with planted objective divergence">
-                <div class="bar-row"><span>Open cross-encoder critic</span><span class="bar"><i style="--v:.55"></i></span><b>0.55</b></div>
-                <div class="bar-row"><span>Frontier LLM-as-judge</span><span class="bar muted"><i style="--v:.43"></i></span><b>0.43</b></div>
-              </div>
-              <p class="result-note">Deterministic critic recovers divergence on 6 of 8 agents, with near-zero variance and no API cost.</p>
-            </div>
-            <p class="why" data-for="research"><b>Contribution:</b> sole author of the accompanying arXiv system paper.</p>
-            <p class="why" data-for="data"><b>Stack:</b> Bayesian IRL, LLM and decision-model judges, reproducible gym.</p>
-            <p class="why" data-for="product"><b>Why it matters:</b> turns an abstract safety concern into evidence a regulator can act on.</p>
-            <ul class="tags"><li>Bayesian IRL</li><li>LLM evaluation</li><li>Agentic safety</li><li>Python</li></ul>
+            <aside class="notes">
+              <p class="note" data-for="research">Sole-authored arXiv system paper. The benchmark is public, so others can test their auditors against it.</p>
+              <p class="note" data-for="data">Bayesian IRL, LLM and decision-model judges, and a reproducible gym. The open critic has near-zero variance where the LLM judge doesn't.</p>
+              <p class="note" data-for="product">Turns an abstract safety risk into evidence a regulator can use, in formats that existing security tooling already reads.</p>
+            </aside>
           </article>
 
-          <article class="project" data-rank-all="2" data-rank-research="3" data-rank-data="3" data-rank-product="1">
-            <div class="project-top">
-              <span class="kicker">Open source · PyPI</span>
-              <a class="repo" href="https://github.com/aakash2410/MCP_RAG_Compliance" target="_blank" rel="noopener" aria-label="rag-compliance-auditor on GitHub">Repo ↗</a>
+          <!-- RCA -->
+          <article class="entry" id="rca" data-rank-all="2" data-rank-research="3" data-rank-data="3" data-rank-product="1">
+            <span class="num entry-num">2.2</span>
+            <div class="main">
+              <h3>rag-compliance-auditor</h3>
+              <p class="meta">Open-source package on PyPI · Built solo · <a href="https://github.com/aakash2410/MCP_RAG_Compliance" target="_blank" rel="noopener">Source ↗</a></p>
+              <p>An MCP server that certifies RAG and AI pipelines against the EU AI Act, GDPR/DPDP, HIPAA, SEBI/RBI, and NIST AI RMF. It <mark data-for="product">runs as a CI/CD gate</mark>, so compliance becomes a check that fails a build instead of a document that sits in a drawer.</p>
+              <dl class="spec">
+                <div><dt>7</dt><dd>audit dimensions</dd></div>
+                <div><dt>8</dt><dd>MCP tools</dd></div>
+                <div><dt>RS256</dt><dd>signed JWT certificates</dd></div>
+                <div><dt>SARIF</dt><dd>CI reporting</dd></div>
+              </dl>
             </div>
-            <h3>rag-compliance-auditor</h3>
-            <p class="lede">An MCP server that certifies RAG and AI pipelines against regulation, and drops into CI as a gate.</p>
-            <ul class="points">
-              <li>Audits across 7 dimensions against the EU AI Act, GDPR/DPDP, HIPAA, SEBI/RBI, and NIST AI RMF.</li>
-              <li>Exposes 8 MCP tools and issues RS256-signed JWT certificates.</li>
-              <li>Runs as a CI/CD gate with SARIF reporting, so it fits into existing pipelines.</li>
-            </ul>
-            <p class="why" data-for="product"><b>Built solo,</b> end to end: scope, design, packaging, and release.</p>
-            <ul class="tags"><li>MCP</li><li>RAG</li><li>CI/CD</li><li>Compliance</li></ul>
+            <aside class="notes">
+              <p class="note" data-for="research">Turns regulatory text into checks that can be run and reproduced.</p>
+              <p class="note" data-for="data">Packaged and published on PyPI; drops into existing pipelines without changes.</p>
+              <p class="note" data-for="product">Scoped, designed, built, and released by one person. Built to fit the pipelines teams already run.</p>
+            </aside>
           </article>
 
-          <article class="project" data-rank-all="3" data-rank-research="2" data-rank-data="2" data-rank-product="3">
-            <div class="project-top">
-              <span class="kicker">Algorithmic fairness · Audit</span>
-              <a class="repo" href="https://github.com/aakash2410/CreditAudit-India" target="_blank" rel="noopener" aria-label="Credit Equity Audit on GitHub">Repo ↗</a>
+          <!-- CEA -->
+          <article class="entry" id="cea" data-rank-all="3" data-rank-research="2" data-rank-data="2" data-rank-product="3">
+            <span class="num entry-num">2.3</span>
+            <div class="main">
+              <h3>Credit Equity Audit of India</h3>
+              <p class="meta">Independent fairness audit · NSSO 77th Round · <a href="https://github.com/aakash2410/CreditAudit-India" target="_blank" rel="noopener">Source ↗</a></p>
+              <p>Who gets credit in India, and on what terms? A <mark data-for="research data">two-stage, Heckman-style deep learning model</mark> separates <em>access</em> to the credit market from the <em>allocation</em> of formal versus informal credit among households already in it. <mark data-for="data">IBM AIF360 adversarial debiasing and SHAP</mark> then test for proxy discrimination, reaching near-ideal disparate impact at ~73.2% accuracy.</p>
+
+              <figure class="fig">
+                <div class="plot" role="img" aria-label="Relative probability of entering the credit market. Male-headed households: 1.00. Female-headed households: 0.59, below the 0.8 four-fifths threshold.">
+                  <i class="thresh" style="--x:.8"><span>four-fifths rule</span></i>
+                  <div class="row"><span class="lab">Male-headed households</span><span class="track"><i class="dot hollow" style="--x:1"></i><b class="val left" style="--x:1">1.00</b></span></div>
+                  <div class="row key"><span class="lab">Female-headed households</span><span class="track"><i class="dot" style="--x:.59"></i><b class="val left" style="--x:.59">0.59</b></span></div>
+                  <div class="row axis"><span class="lab">relative P(entry)</span><span class="track"><i style="--x:0">0</i><i style="--x:.25">.25</i><i style="--x:.5">.50</i><i style="--x:.75">.75</i><i style="--x:1">1</i></span></div>
+                </div>
+                <figcaption>Probability of entering the credit market, relative to male-headed households. <mark data-for="research product">A disparate impact of 0.59</mark>, well below the conventional 0.8 threshold.</figcaption>
+              </figure>
+
+              <p class="aside-p"><mark data-for="research">The audit states its own limits</mark>: self-reported survey data, the risk of collider bias, and SHAP as a diagnostic of the model rather than causal evidence.</p>
             </div>
-            <h3>Credit Equity Audit of India</h3>
-            <p class="lede">An independent fairness audit of household credit access, using the NSSO 77th Round survey.</p>
-            <ul class="points">
-              <li>Two-stage, Heckman-style deep learning model separates <em>access</em> to the credit market from <em>allocation</em> of formal versus informal credit.</li>
-              <li>IBM AIF360 adversarial debiasing and SHAP to test for proxy discrimination, reaching near-ideal disparate impact at ~73.2% accuracy.</li>
-              <li>Documents the limits: self-reported survey data, collider bias risk, and SHAP as a model diagnostic rather than causal evidence.</li>
-            </ul>
-            <div class="result">
-              <div class="bars" aria-label="Probability of credit-market entry relative to male-headed households">
-                <div class="bar-row"><span>Male-headed households</span><span class="bar muted"><i style="--v:1"></i></span><b>1.00</b></div>
-                <div class="bar-row"><span>Female-headed households</span><span class="bar"><i style="--v:.59"></i></span><b>0.59</b></div>
-              </div>
-              <p class="result-note">Relative probability of entering the credit market (disparate impact).</p>
-            </div>
-            <ul class="tags"><li>AIF360</li><li>SHAP</li><li>Causal design</li><li>TensorFlow</li></ul>
+            <aside class="notes">
+              <p class="note" data-for="research">Treats access as a selection problem before asking about allocation. Being honest about limits is part of the result.</p>
+              <p class="note" data-for="data">Stage 1 predicts market participation, stage 2 predicts formal vs. informal allocation.</p>
+              <p class="note" data-for="product">A 0.59 is the kind of number a lender or regulator has to act on.</p>
+            </aside>
           </article>
 
-          <article class="project" data-rank-all="4" data-rank-research="6" data-rank-data="5" data-rank-product="4">
-            <div class="project-top">
-              <span class="kicker">Kalpa Impact × Bhashini</span>
+          <!-- Offline RAG -->
+          <article class="entry" id="rag" data-rank-all="4" data-rank-research="6" data-rank-data="5" data-rank-product="4">
+            <span class="num entry-num">2.4</span>
+            <div class="main">
+              <h3>Offline RAG system</h3>
+              <p class="meta">Kalpa Impact × Bhashini, Government of India</p>
+              <p>A retrieval-augmented system that works without a network connection, built with the Government of India's Bhashini. <mark data-for="product">Sole PM and builder</mark>, from requirements to delivery.</p>
             </div>
-            <h3>Offline RAG system</h3>
-            <p class="lede">A retrieval-augmented system that runs without connectivity, built with the Government of India's Bhashini.</p>
-            <ul class="points">
-              <li>Sole PM and builder, from requirements through delivery.</li>
-            </ul>
-            <ul class="tags"><li>RAG</li><li>Public infrastructure</li><li>Product</li></ul>
+            <aside class="notes">
+              <p class="note" data-for="product">One person holding both the product and the engineering, for a government partner.</p>
+              <p class="note" data-for="data">RAG where the whole pipeline has to run locally.</p>
+            </aside>
           </article>
 
-          <article class="project" data-rank-all="5" data-rank-research="4" data-rank-data="4" data-rank-product="5">
-            <div class="project-top">
-              <span class="kicker">Audio ML · Final-year project</span>
-              <span class="when">2022–23</span>
+          <!-- Baby cry -->
+          <article class="entry" id="cry" data-rank-all="5" data-rank-research="4" data-rank-data="4" data-rank-product="5">
+            <span class="num entry-num">2.5</span>
+            <div class="main">
+              <h3>Baby Cry Reason Detection</h3>
+              <p class="meta">Final-year project · Team of 3 · 2022–23</p>
+              <p>Tells you why an infant is crying (belly pain, burping, discomfort, hunger, or tiredness) from audio alone. <mark data-for="data">Temporal, spectral, cepstral, and prosodic features</mark> (MFCCs, spectral contrast, pitch) from a 457-sample dataset; SMOTETomek for class imbalance; a soft-voting SVM + KNN ensemble. <mark data-for="product">Shipped in a Flutter app</mark> with a feedback loop for retraining.</p>
             </div>
-            <h3>Baby Cry Reason Detection</h3>
-            <p class="lede">Classifies why an infant is crying (belly pain, burping, discomfort, hunger, tiredness) from audio.</p>
-            <ul class="points">
-              <li>Temporal, spectral, cepstral, and prosodic features (MFCCs, spectral contrast, pitch) on a 457-sample dataset.</li>
-              <li>SMOTETomek for class imbalance; soft-voting SVM + KNN ensemble.</li>
-              <li>Shipped in a Flutter app with a feedback loop for retraining. Team of 3.</li>
-            </ul>
-            <ul class="tags"><li>Signal processing</li><li>Ensembles</li><li>Flutter</li></ul>
+            <aside class="notes">
+              <p class="note" data-for="data">Small, imbalanced data done carefully: resampling, then an ensemble rather than a bigger model.</p>
+              <p class="note" data-for="product">Real users' corrections flow back into retraining.</p>
+            </aside>
           </article>
 
-          <article class="project" data-rank-all="6" data-rank-research="5" data-rank-data="6" data-rank-product="6">
-            <div class="project-top">
-              <span class="kicker">NLP · Team project</span>
-              <span class="when">2022</span>
+          <!-- Personality -->
+          <article class="entry" id="big5" data-rank-all="6" data-rank-research="5" data-rank-data="6" data-rank-product="6">
+            <span class="num entry-num">2.6</span>
+            <div class="main">
+              <h3>Personality Prediction from CV and Social Media</h3>
+              <p class="meta">Team project · Team of 4 · 2022</p>
+              <p>Predicts the Big Five personality traits by combining CV text with Facebook behavioural data from the myPersonality dataset: 250 users, 9,917 status updates.</p>
+              <figure class="fig">
+                <div class="plot" role="img" aria-label="Accuracy. Four classical baselines: 0.45 to 0.61. Seven-layer LSTM: 0.82 to 0.85.">
+                  <div class="row"><span class="lab">SVM, LR, GB, XGBoost</span><span class="track"><i class="seg" style="--a:.45;--b:.61"></i><b class="val" style="--x:.61">0.45–0.61</b></span></div>
+                  <div class="row key"><span class="lab">7-layer LSTM</span><span class="track"><i class="seg solid" style="--a:.82;--b:.85"></i><b class="val left" style="--x:.82">0.82–0.85</b></span></div>
+                  <div class="row axis"><span class="lab">accuracy</span><span class="track"><i style="--x:0">0</i><i style="--x:.25">.25</i><i style="--x:.5">.50</i><i style="--x:.75">.75</i><i style="--x:1">1</i></span></div>
+                </div>
+                <figcaption>Accuracy across the five traits. <mark data-for="data">The sequence model clears every classical baseline by at least 0.21.</mark></figcaption>
+              </figure>
             </div>
-            <h3>Personality Prediction from CV and Social Media</h3>
-            <p class="lede">Predicts Big Five traits by combining CV text with Facebook behavioural data.</p>
-            <ul class="points">
-              <li>myPersonality dataset: 250 users, 9,917 status updates.</li>
-              <li>A 7-layer LSTM reached 0.82–0.85 accuracy, against 0.45–0.61 for SVM, logistic regression, gradient boosting, and XGBoost. Team of 4.</li>
-            </ul>
-            <ul class="tags"><li>LSTM</li><li>NLP</li><li>Baselines</li></ul>
+            <aside class="notes">
+              <p class="note" data-for="research">Combines two very different signals, text and behaviour, to predict one construct.</p>
+              <p class="note" data-for="data">Four baselines, so the LSTM's gain is measured rather than assumed.</p>
+            </aside>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============ EXPERIENCE ============ -->
-    <section class="section alt" id="experience">
-      <div class="wrap">
-        <div class="section-head"><h2>Experience</h2></div>
-        <ol class="timeline">
-          <li>
-            <div class="tl-meta"><span class="tl-date">Feb 2026 – present</span><span class="tl-place">Mumbai</span></div>
-            <div class="tl-body">
-              <h3>Kalpa Impact <span>AI Consultant</span></h3>
+      <!-- 3 · EXPERIENCE -->
+      <section class="sec" id="experience" aria-labelledby="h-exp">
+        <span class="num">3</span>
+        <div class="main sec-head"><h2 id="h-exp">Experience</h2></div>
+        <div class="entries">
+          <article class="entry" id="kalpa" data-num="3.1">
+            <span class="num entry-num">3.1</span>
+            <div class="main">
+              <h3>Kalpa Impact</h3>
+              <p class="meta">AI Consultant · Feb 2026 – present · Mumbai</p>
               <ul>
-                <li>Digital public infrastructure and AI governance consulting for UNDP, DPGA, Gates Foundation, and Co-Develop.</li>
-                <li>Worked with the Principal Scientific Adviser's Office on a section of <em>AGI Governance</em> covering AI incident-reporting mechanisms India can adopt, drawing on the EU AI Act and California's SB-53.</li>
-                <li>Sole PM and builder on an offline RAG system with the Government of India's Bhashini.</li>
-                <li data-for="all product">Support internal operations, hiring, and project delivery across engagements.</li>
+                <li>Digital public infrastructure and <mark data-for="research">AI governance</mark> consulting for <mark data-for="product">UNDP, DPGA, the Gates Foundation, and Co-Develop</mark>.</li>
+                <li>With the Principal Scientific Adviser's Office, wrote a section of <em>AGI Governance</em> on <mark data-for="research">AI incident-reporting mechanisms India can adopt</mark>, drawing on the EU AI Act and California's SB-53.</li>
+                <li><mark data-for="data product">Sole PM and builder on an offline RAG system</mark> with the Government of India's Bhashini (<a class="ref" href="#rag" data-ref="rag">2.4</a>).</li>
               </ul>
             </div>
-          </li>
-          <li>
-            <div class="tl-meta"><span class="tl-date">Sep 2023 – Jan 2026</span><span class="tl-place">Pune</span></div>
-            <div class="tl-body">
-              <h3>ZS Associates <span>Business Technology Solutions Associate → Senior Associate</span></h3>
+            <aside class="notes">
+              <p class="note" data-for="product">Also supports internal operations, hiring, and project delivery across engagements.</p>
+              <p class="note" data-for="research">Policy work that feeds straight back into the research questions in §2.</p>
+            </aside>
+          </article>
+
+          <article class="entry" id="zs" data-num="3.2">
+            <span class="num entry-num">3.2</span>
+            <div class="main">
+              <h3>ZS Associates</h3>
+              <p class="meta">Business Technology Solutions Associate → Senior Associate · Sep 2023 – Jan 2026 · Pune</p>
               <ul>
-                <li>Launched an agentic AI analytics product for natural-language querying of sales-performance metrics.</li>
-                <li>Owned incentive-compensation product logic for a Fortune 100 pharma client, delivered at 100% accuracy.</li>
-                <li>Led a team of 4. Recognised as a top 1% performer firm-wide; promoted to Senior Associate within 8–10 months.</li>
+                <li>Launched <mark data-for="data product">an agentic AI analytics product</mark> for natural-language querying of sales-performance metrics.</li>
+                <li>Owned <mark data-for="product">incentive-compensation product logic</mark> for a Fortune 100 pharma client, delivered at 100% accuracy.</li>
+                <li><mark data-for="product">Led a team of 4.</mark> Recognised as a top 1% performer firm-wide; promoted to Senior Associate within 8–10 months.</li>
               </ul>
             </div>
-          </li>
-          <li>
-            <div class="tl-meta"><span class="tl-date">Jul 2022 – Feb 2023</span><span class="tl-place">Bangalore</span></div>
-            <div class="tl-body">
-              <h3>Bright Money <span>Product Analyst Intern</span></h3>
+            <aside class="notes">
+              <p class="note" data-for="product">Incentive comp is the logic that decides what a sales force gets paid, so 100% accuracy was the requirement.</p>
+            </aside>
+          </article>
+
+          <article class="entry" id="bright" data-num="3.3">
+            <span class="num entry-num">3.3</span>
+            <div class="main">
+              <h3>Bright Money</h3>
+              <p class="meta">Product Analyst Intern · Jul 2022 – Feb 2023 · Bangalore</p>
               <ul>
-                <li>Launched a referral programme that saved $120K in customer-acquisition cost over 5 months.</li>
-                <li>Built A/B testing infrastructure and SQL dashboards.</li>
+                <li>Launched a referral programme that <mark data-for="product">saved $120K in customer-acquisition cost over 5 months</mark>.</li>
+                <li>Built <mark data-for="data">A/B testing infrastructure and SQL dashboards</mark>.</li>
               </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 4 · PUBLICATIONS -->
+      <section class="sec" id="publications" aria-labelledby="h-pub">
+        <span class="num">4</span>
+        <div class="main sec-head"><h2 id="h-pub">Publications</h2></div>
+        <ol class="entries bib">
+          <li class="entry" id="p-agi" data-num="4.1">
+            <span class="num entry-num">4.1</span>
+            <div class="main">
+              <p class="cite">Section on AI incident-reporting mechanisms for India. In <em>AGI Governance</em>, with the Office of the Principal Scientific Adviser to the Government of India.</p>
+              <p class="gloss">Mechanisms India could adopt, drawing on the EU AI Act and California's SB-53.</p>
+            </div>
+          </li>
+          <li class="entry" id="p-arxiv" data-num="4.2">
+            <span class="num entry-num">4.2</span>
+            <div class="main">
+              <p class="cite"><mark data-for="research">Sangani, A.</mark> <em>Inverse-Objective Regulator</em>. arXiv system paper, sole author.</p>
+              <p class="gloss">The paper behind <a class="ref" href="#ior" data-ref="ior">2.1</a>. <a href="https://github.com/aakash2410/Inverse-Objective-Regulator" target="_blank" rel="noopener">Code ↗</a></p>
+            </div>
+          </li>
+          <li class="entry" id="p-chapter" data-num="4.3">
+            <span class="num entry-num">4.3</span>
+            <div class="main">
+              <p class="cite"><mark data-for="research">Sangani, A.</mark>, Doshi, P., &amp; Sawant, V. Unusual social media behavior detection using distributed data stream mining. In <em>Practical Data Mining Techniques and Applications</em>. Auerbach Publications (CRC Press), 2022–23.</p>
+              <p class="gloss">Spots hacked or bot-run accounts from clickstreams. Users are clustered by behaviour, with a Very Fast Decision Tree per cluster, parallelised on Apache Spark. <mark data-for="data">Concept-drift handling</mark> means a genuine change in someone's behaviour retrains the model instead of raising a false alarm.</p>
             </div>
           </li>
         </ol>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============ WRITING ============ -->
-    <section class="section" id="writing">
-      <div class="wrap">
-        <div class="section-head"><h2>Publications &amp; writing</h2></div>
-        <div class="pubs">
-          <article class="pub">
-            <span class="pub-type">Policy · Contributing author</span>
-            <h3>AI incident reporting for India</h3>
-            <p>A section of <em>AGI Governance</em>, written with the Principal Scientific Adviser's Office, on incident-reporting mechanisms India can adopt, based on the EU AI Act and California's SB-53.</p>
+      <!-- 5 · EDUCATION -->
+      <section class="sec" id="education" aria-labelledby="h-edu">
+        <span class="num">5</span>
+        <div class="main sec-head"><h2 id="h-edu">Education</h2></div>
+        <div class="entries">
+          <article class="entry">
+            <span class="num entry-num">5.1</span>
+            <div class="main">
+              <h3>D. J. Sanghvi College of Engineering</h3>
+              <p class="meta">University of Mumbai · B.Tech, Information Technology · 2019 – 2023</p>
+              <p>CGPA <mark data-for="research">8.90 / 10</mark>, credit-weighted across eight semesters, on a merit scholarship covering 100% of tuition.</p>
+              <table class="grades">
+                <caption>Selected coursework</caption>
+                <tbody>
+                  <tr><td>Advanced Data Structures</td><td>O</td><td>95</td></tr>
+                  <tr><td><mark data-for="research data">Probability &amp; Statistics</mark></td><td>O</td><td>93</td></tr>
+                  <tr><td>Artificial Intelligence</td><td>A+</td><td>84</td></tr>
+                  <tr><td>Discrete Structures</td><td>A+</td><td>84</td></tr>
+                  <tr><td>Design &amp; Analysis of Algorithms</td><td>A+</td><td>83</td></tr>
+                  <tr><td><mark data-for="data">Statistical Analysis</mark></td><td>A+</td><td>81</td></tr>
+                </tbody>
+              </table>
+            </div>
           </article>
-          <article class="pub">
-            <span class="pub-type">Preprint · Sole author</span>
-            <h3>Inverse-Objective Regulator</h3>
-            <p>arXiv system paper describing black-box auditing of deployed AI agents through Bayesian inverse reinforcement learning, with an open 8-agent benchmark.</p>
-            <a href="https://github.com/aakash2410/Inverse-Objective-Regulator" target="_blank" rel="noopener">Code ↗</a>
-          </article>
-          <article class="pub">
-            <span class="pub-type">Book chapter · 2022–23</span>
-            <h3>Unusual Social Media Behavior Detection Using Distributed Data Stream Mining</h3>
-            <p class="cite">Sangani, A., Doshi, P., &amp; Sawant, V. In <em>Practical Data Mining Techniques and Applications</em>. Auerbach Publications (CRC Press).</p>
-            <p>Clickstream-based detection of hacked or bot-controlled accounts: users clustered by behaviour, a Hoeffding-tree classifier per cluster, parallelised on Apache Spark, with concept-drift handling so genuine behaviour change retrains the model instead of raising a false alarm.</p>
-          </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============ SKILLS ============ -->
-    <section class="section alt" id="skills">
-      <div class="wrap">
-        <div class="section-head"><h2>Toolkit</h2></div>
-        <div class="skills">
-          <div class="skill-group" data-rank-all="1" data-rank-research="1" data-rank-data="2" data-rank-product="3">
-            <h3>Methods</h3>
-            <ul class="tags"><li>Bayesian inverse RL</li><li>LLM evaluation &amp; red-teaming</li><li>Algorithmic fairness</li><li>SHAP</li><li>IBM AIF360</li><li>A/B testing</li><li>Heckman-style selection models</li></ul>
-          </div>
-          <div class="skill-group" data-rank-all="2" data-rank-research="3" data-rank-data="1" data-rank-product="2">
-            <h3>ML &amp; LLM systems</h3>
-            <ul class="tags"><li>RAG</li><li>Agentic AI</li><li>MCP servers</li><li>LSTM</li><li>XGBoost</li><li>SVM &amp; ensembles</li><li>SMOTETomek</li><li>scikit-learn</li><li>TensorFlow</li></ul>
-          </div>
-          <div class="skill-group" data-rank-all="3" data-rank-research="4" data-rank-data="3" data-rank-product="4">
-            <h3>Data &amp; infrastructure</h3>
-            <ul class="tags"><li>Python</li><li>SQL</li><li>pandas</li><li>PostgreSQL</li><li>Apache Spark</li><li>AWS</li><li>Docker</li><li>CI/CD gates</li><li>SARIF</li><li>RS256 JWTs</li></ul>
-          </div>
-          <div class="skill-group" data-rank-all="4" data-rank-research="2" data-rank-data="4" data-rank-product="5">
-            <h3>AI governance frameworks</h3>
-            <ul class="tags"><li>EU AI Act</li><li>NIST AI RMF</li><li>ISO 42001</li><li>GDPR / DPDP</li><li>HIPAA</li><li>OWASP ASI</li><li>MITRE ATLAS</li><li>California SB-53</li></ul>
-          </div>
-          <div class="skill-group" data-rank-all="5" data-rank-research="5" data-rank-data="5" data-rank-product="1">
-            <h3>Product &amp; strategy</h3>
-            <ul class="tags"><li>Product logic &amp; requirements</li><li>Experiment design</li><li>SQL dashboards</li><li>Team leadership</li><li>Government &amp; multilateral stakeholders</li></ul>
-          </div>
+      <!-- 6 · INDEX -->
+      <section class="sec" id="index" aria-labelledby="h-idx">
+        <span class="num">6</span>
+        <div class="main sec-head">
+          <h2 id="h-idx">Index</h2>
+          <p class="sec-sub">Methods, tools, and frameworks, with the sections where they were used.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ EDUCATION ============ -->
-    <section class="section" id="education">
-      <div class="wrap edu">
-        <div>
-          <div class="section-head"><h2>Education</h2></div>
-          <h3 class="edu-school">D. J. Sanghvi College of Engineering, University of Mumbai</h3>
-          <p class="edu-degree">B.Tech, Information Technology · 2019 – 2023 · CGPA 8.90 / 10</p>
-          <p class="edu-note">Merit-based scholarship covering 100% of tuition.</p>
+        <div class="index">
+          <div class="ix-group"><h4>A</h4><ul>
+            <li><mark data-for="data product">A/B testing</mark> <a class="ref" href="#bright" data-ref="bright">3.3</a></li>
+            <li><mark data-for="research data">Adversarial debiasing</mark>, AIF360 <a class="ref" href="#cea" data-ref="cea">2.3</a></li>
+            <li><mark data-for="data product">Agentic AI</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#zs" data-ref="zs">3.2</a></li>
+            <li>Apache Spark <a class="ref" href="#p-chapter" data-ref="p-chapter">4.3</a></li>
+            <li>AWS</li>
+          </ul></div>
+          <div class="ix-group"><h4>B</h4><ul>
+            <li><mark data-for="research data">Bayesian inverse reinforcement learning</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a></li>
+          </ul></div>
+          <div class="ix-group"><h4>C</h4><ul>
+            <li><mark data-for="research">California SB-53</mark> <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a> <a class="ref" href="#p-agi" data-ref="p-agi">4.1</a></li>
+            <li><mark data-for="product">CI/CD gates</mark> <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li><mark data-for="data">Class imbalance</mark>, SMOTETomek <a class="ref" href="#cry" data-ref="cry">2.5</a></li>
+            <li>Concept drift <a class="ref" href="#p-chapter" data-ref="p-chapter">4.3</a></li>
+          </ul></div>
+          <div class="ix-group"><h4>D</h4><ul>
+            <li><mark data-for="research data">Disparate impact</mark> <a class="ref" href="#cea" data-ref="cea">2.3</a></li>
+            <li>Docker</li>
+          </ul></div>
+          <div class="ix-group"><h4>E</h4><ul>
+            <li><mark data-for="research product">EU AI Act</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#rca" data-ref="rca">2.2</a> <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a></li>
+            <li><mark data-for="data">Ensembles</mark>, soft-voting <a class="ref" href="#cry" data-ref="cry">2.5</a></li>
+          </ul></div>
+          <div class="ix-group"><h4>F</h4><ul>
+            <li>Flutter <a class="ref" href="#cry" data-ref="cry">2.5</a></li>
+          </ul></div>
+          <div class="ix-group"><h4>G–H</h4><ul>
+            <li>GDPR / DPDP <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li><mark data-for="research data">Heckman-style selection models</mark> <a class="ref" href="#cea" data-ref="cea">2.3</a></li>
+            <li>HIPAA <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+          </ul></div>
+          <div class="ix-group"><h4>I</h4><ul>
+            <li><mark data-for="product">Incentive-compensation logic</mark> <a class="ref" href="#zs" data-ref="zs">3.2</a></li>
+            <li><mark data-for="research">Incident reporting</mark> <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a> <a class="ref" href="#p-agi" data-ref="p-agi">4.1</a></li>
+            <li>ISO 42001</li>
+          </ul></div>
+          <div class="ix-group"><h4>J–L</h4><ul>
+            <li>JWT certificates, RS256 <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li><mark data-for="research data">LLM evaluation &amp; red-teaming</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a></li>
+            <li><mark data-for="data">LSTM</mark> <a class="ref" href="#big5" data-ref="big5">2.6</a></li>
+          </ul></div>
+          <div class="ix-group"><h4>M</h4><ul>
+            <li><mark data-for="data product">MCP servers</mark> <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li><mark data-for="data">MFCCs &amp; spectral features</mark> <a class="ref" href="#cry" data-ref="cry">2.5</a></li>
+            <li>MITRE ATLAS <a class="ref" href="#ior" data-ref="ior">2.1</a></li>
+          </ul></div>
+          <div class="ix-group"><h4>N–O</h4><ul>
+            <li><mark data-for="research">NIST AI RMF</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li>OWASP <a class="ref" href="#ior" data-ref="ior">2.1</a></li>
+          </ul></div>
+          <div class="ix-group"><h4>P</h4><ul>
+            <li>pandas, PostgreSQL</li>
+            <li><mark data-for="product">Product requirements &amp; logic</mark> <a class="ref" href="#rag" data-ref="rag">2.4</a> <a class="ref" href="#zs" data-ref="zs">3.2</a></li>
+            <li>Python</li>
+          </ul></div>
+          <div class="ix-group"><h4>R</h4><ul>
+            <li><mark data-for="data product">RAG</mark> <a class="ref" href="#rca" data-ref="rca">2.2</a> <a class="ref" href="#rag" data-ref="rag">2.4</a></li>
+            <li><mark data-for="product">Referral programmes</mark> <a class="ref" href="#bright" data-ref="bright">3.3</a></li>
+          </ul></div>
+          <div class="ix-group"><h4>S</h4><ul>
+            <li>SARIF reporting <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li>scikit-learn</li>
+            <li>SEBI / RBI <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li><mark data-for="research data">SHAP</mark> <a class="ref" href="#cea" data-ref="cea">2.3</a></li>
+            <li><mark data-for="data product">SQL dashboards</mark> <a class="ref" href="#bright" data-ref="bright">3.3</a></li>
+            <li><mark data-for="product">Stakeholders</mark>: government, multilateral <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a></li>
+          </ul></div>
+          <div class="ix-group"><h4>T–X</h4><ul>
+            <li><mark data-for="product">Team leadership</mark> <a class="ref" href="#zs" data-ref="zs">3.2</a></li>
+            <li>TensorFlow</li>
+            <li>Very Fast Decision Trees <a class="ref" href="#p-chapter" data-ref="p-chapter">4.3</a></li>
+            <li>XGBoost <a class="ref" href="#big5" data-ref="big5">2.6</a></li>
+          </ul></div>
         </div>
-        <table class="grades">
-          <caption>Selected coursework</caption>
-          <tbody>
-            <tr><td>Advanced Data Structures</td><td>O</td><td>95%</td></tr>
-            <tr><td>Probability &amp; Statistics</td><td>O</td><td>93%</td></tr>
-            <tr><td>Artificial Intelligence</td><td>A+</td><td>84%</td></tr>
-            <tr><td>Discrete Structures</td><td>A+</td><td>84%</td></tr>
-            <tr><td>Design &amp; Analysis of Algorithms</td><td>A+</td><td>83%</td></tr>
-            <tr><td>Statistical Analysis</td><td>A+</td><td>81%</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============ CONTACT ============ -->
-    <section class="section contact" id="contact">
-      <div class="wrap">
-        <h2>Let's talk.</h2>
-        <p data-for="all">Open to conversations about research, data science, and AI product roles, and to collaborations on auditable AI.</p>
-        <p data-for="research">Open to research positions, graduate study, and collaborations on AI accountability, fairness, and governance.</p>
-        <p data-for="data">Open to data science and ML roles, especially where evaluation and trustworthiness matter.</p>
-        <p data-for="product">Open to product, strategy, and technical consulting roles on AI products.</p>
-        <div class="contact-links">
-          <a href="mailto:aakash.sangani2410@gmail.com">aakash.sangani2410@gmail.com</a>
-          <a href="https://www.linkedin.com/in/aakash-sangani-3149a11a7" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="https://github.com/aakash2410" target="_blank" rel="noopener">GitHub ↗</a>
+      <!-- 7 · CORRESPONDENCE -->
+      <section class="sec" id="correspondence" aria-labelledby="h-cor">
+        <span class="num">7</span>
+        <div class="main sec-head"><h2 id="h-cor">Correspondence</h2></div>
+        <div class="main corr">
+          <p class="corr-lede" data-for="all">Open to conversations about research, data science, and AI product roles, and to collaborations on auditable AI.</p>
+          <p class="corr-lede" data-for="research">Open to research positions, graduate study, and collaborations on AI accountability, fairness, and governance.</p>
+          <p class="corr-lede" data-for="data">Open to data science and ML roles, especially where evaluation and trustworthiness matter.</p>
+          <p class="corr-lede" data-for="product">Open to product, strategy, and technical consulting roles on AI products.</p>
+          <a class="mail" href="mailto:aakash.sangani2410@gmail.com">aakash.sangani2410@gmail.com</a>
+          <p class="links">
+            <a href="https://www.linkedin.com/in/aakash-sangani-3149a11a7" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="https://github.com/aakash2410" target="_blank" rel="noopener">GitHub ↗</a>
+            <a data-cv href="assets/resume/Aakash_Sangani_Research.pdf" download><span data-cv-label>Download CV</span> ↓</a>
+          </p>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="footer">
-    <div class="wrap">
-      <span>© <span id="year">2026</span> Aakash Sangani</span>
-      <span class="share">Share this view: <button type="button" class="copy-link">Copy link</button></span>
-    </div>
-  </footer>
+      <footer class="colophon">
+        <p>Set in Newsreader and IBM Plex Mono. Written by hand in HTML and CSS, no build step. © <span id="year">2026</span> Aakash Sangani.</p>
+      </footer>
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
