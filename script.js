@@ -139,5 +139,15 @@
   }, { rootMargin: "-20% 0px -70% 0px" });
   tocLinks.forEach((_, id) => { const s = document.getElementById(id); if (s) io.observe(s); });
 
+  // Keep the length of the current role honest without editing the page.
+  document.querySelectorAll(".tenure em[data-since]").forEach((el) => {
+    const [y, m] = el.dataset.since.split("-").map(Number);
+    const now = new Date();
+    const months = (now.getFullYear() - y) * 12 + (now.getMonth() + 1 - m);
+    if (months < 1) return;
+    const yrs = Math.floor(months / 12), mos = months % 12;
+    el.textContent = [yrs && `${yrs} yr`, mos && `${mos} mo`].filter(Boolean).join(" ");
+  });
+
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
