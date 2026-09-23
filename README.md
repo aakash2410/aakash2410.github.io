@@ -18,7 +18,7 @@ Plain HTML, CSS, and JavaScript. No build step.
 - **Index references:** `<a class="ref" href="#ior" data-ref="ior">2.1</a>` points at an element's `id`; the number is filled in for you.
 - **Figures:** each plot row places marks on a 0–1 scale with `--x` (a point) or `--a`/`--b` (a range).
 - **CVs:** `assets/resume/`, mapped to readers in `script.js`.
-- **Colours:** paper, ink, and the three highlighters are tokens at the top of `styles.css`.
+- **Colours and type:** paper, ink, the three highlighters, and the three typefaces (`--display`, `--serif`, `--mono`) are tokens at the top of `styles.css`. Swapping a typeface means changing one token and the Google Fonts link in `index.html`.
 
 ## Preview locally
 
