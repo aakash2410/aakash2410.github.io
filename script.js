@@ -129,11 +129,11 @@
     setTimeout(() => (share.textContent = original), 2000);
   });
 
-  // Light / dark
+  // Light / dark. The page prints on paper by default, whatever the system
+  // prefers, so dark is purely what this toggle has been set to.
   const root = document.documentElement;
   document.querySelector(".theme").addEventListener("click", () => {
-    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
-    root.dataset.theme = dark ? "light" : "dark";
+    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
     store.set("theme", root.dataset.theme);
   });
 

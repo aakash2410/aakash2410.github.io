@@ -19,7 +19,7 @@ Plain HTML, CSS, and JavaScript. No build step.
 - **Figures:** each plot row places marks on a 0–1 scale with `--x` (a point) or `--a`/`--b` (a range).
 - **CVs:** `assets/resume/`, mapped to readers in `script.js`.
 - **Plates:** the three inks (`--y`, `--b`, `--p`), the paper and the key ink are tokens at the top of `styles.css`. Each reader's registration offset is set on the `body[data-lens="..."]` rules just below them.
-- **Overprint:** plates blend with `mix-blend-mode`, which is `multiply` on light paper and `screen` in dark mode (`--blend`). Text sitting on a plate is forced dark with `--mk-ink` so it stays readable in both.
+- **Overprint:** plates blend with `mix-blend-mode: multiply` on paper (`--blend`). The page always loads on paper, whatever the system colour scheme; dark is opt-in from the toggle in the bar, and uses flat opaque inks (`--blend: normal`), because screen-blending three plates turns them white. Text sitting on a plate is forced dark with `--mk-ink`.
 - **Type:** Archivo (variable width and weight) and DM Mono, set as `--sans` and `--mono`.
 
 ## Preview locally

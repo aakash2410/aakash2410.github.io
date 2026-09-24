@@ -35,20 +35,13 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #141319; --ink: #f2efe4; --ink-2: #b6b1c0; --ink-3: #807b8c; --rule: #33313c;
-    --y: #ffd84d; --b: #6fb7ff; --p: #ff7fb0;
-    --note-y: #ffd84d; --note-b: #8fa9ff; --note-p: #ff9cc2;
-    --mk-ink: #14131a; --blend: screen; --grain: .1;
-    color-scheme: dark;
-  }
-}
+/* This is a print job on paper, so the paper stock is the default even when
+   the system asks for dark. Dark is available from the toggle in the bar. */
 :root[data-theme="dark"] {
-  --paper: #141319; --ink: #f2efe4; --ink-2: #b6b1c0; --ink-3: #807b8c; --rule: #33313c;
+  --paper: #151419; --ink: #f4f1e6; --ink-2: #b6b1c0; --ink-3: #807b8c; --rule: #33313c;
   --y: #ffd84d; --b: #6fb7ff; --p: #ff7fb0;
   --note-y: #ffd84d; --note-b: #8fa9ff; --note-p: #ff9cc2;
-  --mk-ink: #14131a; --blend: screen; --grain: .1;
+  --mk-ink: #14131a; --blend: normal; --grain: .07;
   color-scheme: dark;
 }
 
