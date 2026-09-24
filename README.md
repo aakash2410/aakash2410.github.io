@@ -22,6 +22,15 @@ Plain HTML, CSS, and JavaScript. No build step.
 - **Overprint:** plates blend with `mix-blend-mode: multiply` on paper (`--blend`). The page always loads on paper, whatever the system colour scheme; dark is opt-in from the toggle in the bar, and uses flat opaque inks (`--blend: normal`), because screen-blending three plates turns them white. Text sitting on a plate is forced dark with `--mk-ink`.
 - **Type:** Archivo (variable width and weight) and DM Mono, set as `--sans` and `--mono`.
 
+## After changing CSS or JS
+
+GitHub Pages lets browsers reuse files for 10 minutes, and Safari often holds them much longer, so edits can appear not to land. Bump the version on both URLs in `index.html` when you change either file:
+
+```html
+<link rel="stylesheet" href="styles.css?v=20260924a">
+<script src="script.js?v=20260924a"></script>
+```
+
 ## Preview locally
 
 ```bash
