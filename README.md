@@ -2,7 +2,7 @@
 
 Personal portfolio of Aakash Sangani: AI governance research, data science, and AI product work.
 
-The page is set like an annotated working paper: numbered sections, figures, a bibliography, and an index. Three readers can mark it up, each with their own highlighter: **Researcher** (yellow), **Data scientist** (blue), and **Product & strategy** (pink). Picking a reader highlights the phrases that matter to them, adds their notes in the margin, reorders the selected work (renumbering sections, figures, and index references to match), and switches the CV download. Each reading has its own link:
+The page is printed as a three-plate job. Each reader is an ink plate: **Researcher** (yellow), **Data scientist** (blue), **Product & strategy** (pink). "Anyone" prints all three slightly out of register, so the name fringes in colour. Picking a reader brings that plate into register, fades the other two, inks the phrases that matter to them, adds their notes in the margin, reorders the selected work (renumbering sections, figures, and index references to match), and switches the CV download. Each reading has its own link:
 
 - https://aakash2410.github.io/?lens=research
 - https://aakash2410.github.io/?lens=data
@@ -18,7 +18,9 @@ Plain HTML, CSS, and JavaScript. No build step.
 - **Index references:** `<a class="ref" href="#ior" data-ref="ior">2.1</a>` points at an element's `id`; the number is filled in for you.
 - **Figures:** each plot row places marks on a 0–1 scale with `--x` (a point) or `--a`/`--b` (a range).
 - **CVs:** `assets/resume/`, mapped to readers in `script.js`.
-- **Colours and type:** paper, ink, the three highlighters, and the three typefaces (`--display`, `--serif`, `--mono`) are tokens at the top of `styles.css`. Swapping a typeface means changing one token and the Google Fonts link in `index.html`.
+- **Plates:** the three inks (`--y`, `--b`, `--p`), the paper and the key ink are tokens at the top of `styles.css`. Each reader's registration offset is set on the `body[data-lens="..."]` rules just below them.
+- **Overprint:** plates blend with `mix-blend-mode`, which is `multiply` on light paper and `screen` in dark mode (`--blend`). Text sitting on a plate is forced dark with `--mk-ink` so it stays readable in both.
+- **Type:** Archivo (variable width and weight) and DM Mono, set as `--sans` and `--mono`.
 
 ## Preview locally
 

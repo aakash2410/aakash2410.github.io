@@ -1,5 +1,11 @@
 (() => {
   const LENSES = ["all", "research", "data", "product"];
+  const PLATES = {
+    all:      "Plates Y+B+P",
+    research: "Plate Y \u00b7 yellow",
+    data:     "Plate B \u00b7 blue",
+    product:  "Plate P \u00b7 pink",
+  };
   const CVS = {
     all:      { href: "assets/resume/Aakash_Sangani_Research.pdf",         label: "Download CV" },
     research: { href: "assets/resume/Aakash_Sangani_Research.pdf",         label: "Academic CV" },
@@ -79,6 +85,8 @@
     buttons.forEach((b) => b.setAttribute("aria-checked", String(b.dataset.lensBtn === lens)));
     document.querySelectorAll("[data-cv]").forEach((a) => (a.href = CVS[lens].href));
     document.querySelectorAll("[data-cv-label]").forEach((s) => (s.textContent = CVS[lens].label));
+    const readout = document.querySelector("[data-plate]");
+    if (readout) readout.textContent = PLATES[lens];
     store.set("lens", lens);
     if (updateUrl) history.replaceState(null, "", lensUrl(lens));
   }
