@@ -12,26 +12,22 @@
 <p class="contact">Mumbai, India <span>·</span> aakash.sangani2410@gmail.com <span>·</span> linkedin.com/in/aakash-sangani-3149a11a7 <span>·</span> github.com/aakash2410 <span>·</span> aakash2410.github.io</p>
 
 <h2>Summary</h2>
-<p class="summary">Data scientist with 3+ years across pharma analytics, fintech experimentation, and AI governance. Builds and evaluates ML and LLM systems, from edge inference and retrieval to Bayesian inference and fairness audits. Author of two open-source AI evaluation tools and a benchmark for agentic failure modes.</p>
+<p class="summary">Data scientist, 3+ years across pharma analytics, fintech experimentation and AI governance. Builds and evaluates ML and LLM systems: edge inference, retrieval, Bayesian inference, fairness audits. Author of two open-source evaluation tools and an open agentic-failure benchmark.</p>
 
 <h2>Technical Skills</h2>
-<p class="kv"><b>ML and LLM systems:</b> RAG, agentic AI, LLM evaluation and red-teaming, MCP servers, Bayesian inverse reinforcement learning, LSTM, XGBoost, SVM, ensembles, SMOTETomek, SHAP, IBM AIF360</p>
+<p class="kv"><b>ML and LLM:</b> RAG, agentic AI, LLM evaluation and red-teaming, MCP servers, Bayesian inverse RL, LSTM, XGBoost, SHAP, AIF360, scikit-learn, TensorFlow</p>
 <p class="kv"><b>Edge and inference:</b> INT8 quantisation, ONNX, parallel batched inference, sentence-transformers, vector search, ASR / MT / TTS pipelines</p>
-<p class="kv"><b>Data and experimentation:</b> Python, SQL, pandas, NumPy, PostgreSQL, Apache Spark, A/B testing, scikit-learn, TensorFlow</p>
-<p class="kv"><b>Infrastructure:</b> AWS, Docker, Ansible, CI/CD gates, SARIF reporting</p>
-<p class="kv"><b>Governance frameworks:</b> EU AI Act, NIST AI RMF, ISO 42001, GDPR/DPDP, HIPAA, OWASP ASI, MITRE ATLAS</p>
+<p class="kv"><b>Data and infrastructure:</b> Python, SQL, pandas, NumPy, PostgreSQL, Apache Spark, A/B testing, AWS, Docker, Ansible, CI/CD gates, SARIF</p> <p class="kv"><b>Governance:</b> EU AI Act, NIST AI RMF, ISO 42001, GDPR/DPDP, HIPAA, OWASP ASI, MITRE ATLAS</p>
 
-<h2>Professional Experience</h2>
+<h2>Experience</h2>
 
 <div class="entry">
   <div class="row"><span class="role">AI Consultant</span><span class="meta">Feb 2026 – present</span></div>
   <div class="sub"><span class="org">Kalpa Impact</span><span>Mumbai</span></div>
   <ul>
-    <li>Quantised the speech and vision models to INT8 via ONNX and restructured inference into parallel batched streams on <b>Suno Sutra</b>, the open-source offline AI device from Digital India Bhashini (MeitY) and Current AI: peak memory down 40%, end-to-end latency from ~8s to 2–3s across 22 Indic languages.</li>
-    <li>Built and packaged <b>The Specialist</b>, a grounded offline retrieval module for that device: multilingual-e5-small embeddings with a deterministic TF-IDF fallback, two refusal gates, and a source citation on every answer. Ships as an additive overlay installed by Ansible, with the corpus refreshed in the device's connectivity window.</li>
-    <li>Designed the evaluation framework for the <b>VYOMA Innovation Challenge</b> (₹80 lakh, run by Bhashini, Current AI and Kalpa Impact): jury rubric, use-case judging matrix and scoring thresholds, through to the finale at IIIT-Delhi.</li>
-    <li>Verified edge-AI performance claims submitted to the Gates Foundation; wrote the reference architecture for AI-enabled coordinated care over ABDM-connected health systems.</li>
-    <li>With the Principal Scientific Adviser's Office, wrote a section of <i>AGI Governance</i> on AI incident-reporting mechanisms India can adopt, drawing on the EU AI Act and California's SB-53.</li>
+    <li>Quantised the speech and vision models to INT8 via ONNX and restructured inference into parallel batched streams on <b>Suno Sutra</b>, the open-source offline AI device from Digital India Bhashini (MeitY) and Current AI: peak memory down 40%, end-to-end latency ~8s → 2–3s across 22 Indic languages.</li>
+    <li>Built and packaged <b>The Specialist</b>, a grounded offline retrieval module for that device: multilingual-e5-small embeddings with a deterministic TF-IDF fallback, two refusal gates, and a source citation on every answer.</li>
+    <li>Designed the evaluation framework for the <b>VYOMA Innovation Challenge</b> (₹80 lakh, Bhashini × Current AI × Kalpa Impact): jury rubric, judging matrix and scoring thresholds. Verified edge-AI claims submitted to the Gates Foundation; wrote a section of <i>AGI Governance</i> with the Principal Scientific Adviser's Office on AI incident reporting.</li>
   </ul>
 </div>
 
@@ -40,8 +36,7 @@
   <div class="sub"><span class="org">ZS Associates</span><span>Pune</span></div>
   <ul>
     <li>Launched an agentic AI analytics product for natural-language querying of sales-performance metrics.</li>
-    <li>Owned incentive-compensation product logic for a Fortune 100 pharma client, delivered at 100% accuracy.</li>
-    <li>Led a team of 4. Recognised as a top 1% performer firm-wide; promoted to Senior Associate within 8–10 months.</li>
+    <li>Owned incentive-compensation product logic for a Fortune 100 pharma client at 100% accuracy. Led a team of 4; top 1% performer firm-wide, promoted to Senior Associate within 8–10 months.</li>
   </ul>
 </div>
 
@@ -49,56 +44,29 @@
   <div class="row"><span class="role">Product Analyst Intern</span><span class="meta">Jul 2022 – Feb 2023</span></div>
   <div class="sub"><span class="org">Bright Money</span><span>Bangalore</span></div>
   <ul>
-    <li>Launched a referral programme that saved $120K in customer-acquisition cost over 5 months.</li>
-    <li>Built A/B testing infrastructure and SQL dashboards.</li>
+    <li>Built A/B testing infrastructure and SQL dashboards; launched a referral programme that saved $120K in customer-acquisition cost over 5 months.</li>
   </ul>
 </div>
 
-<h2>Selected Projects</h2>
+<h2>Open-Source Projects</h2>
 
 <div class="entry">
   <div class="row"><span class="role">Inverse-Objective Regulator</span><span class="repo">github.com/aakash2410/Inverse-Objective-Regulator</span></div>
   <ul class="tight">
-    <li>Black-box auditor that infers a deployed agent's revealed objective from its tool-call traces via Bayesian inverse reinforcement learning, scores divergence from the declared purpose, and emits evidence mapped to the EU AI Act, OWASP, MITRE ATLAS and NIST AI RMF as JSON and SARIF.</li>
-    <li>Open 8-agent benchmark of agentic failure modes (reward hacking, power-seeking, sycophancy, privacy leakage, safety-skipping). A deterministic open cross-encoder critic recovered planted objective divergence on 6 of 8 agents (mean r = 0.55), beating a frontier LLM-as-judge (0.08 → 0.43) with near-zero variance and no API cost. Sole author of the accompanying arXiv system paper.</li>
+    <li>Black-box auditor that infers a deployed agent's revealed objective from its tool-call traces via Bayesian inverse RL and scores divergence from the declared purpose, emitting JSON and SARIF mapped to the EU AI Act, OWASP, MITRE ATLAS and NIST AI RMF.</li>
+    <li>Open 8-agent benchmark of agentic failure modes. A deterministic cross-encoder critic recovered planted divergence on 6 of 8 agents (mean r = 0.55) against a frontier LLM-as-judge (0.08 → 0.43), with near-zero variance and no API cost. Sole author of the arXiv system paper.</li>
   </ul>
 </div>
 
 <div class="entry">
   <div class="row"><span class="role">rag-compliance-auditor</span><span class="repo">github.com/aakash2410/MCP_RAG_Compliance</span></div>
   <ul class="tight">
-    <li>Sole-authored open-source package on PyPI. MCP server that certifies RAG and AI pipelines against the EU AI Act, GDPR/DPDP, HIPAA, SEBI/RBI and NIST AI RMF across 7 audit dimensions.</li>
-    <li>Issues RS256-signed JWT certificates, exposes 8 MCP tools, and runs as a CI/CD gate with SARIF reporting.</li>
+    <li>Sole-authored package on PyPI. MCP server certifying RAG pipelines against the EU AI Act, GDPR/DPDP, HIPAA, SEBI/RBI and NIST AI RMF across 7 dimensions; 8 MCP tools, RS256-signed certificates, runs as a CI gate with SARIF.</li>
   </ul>
 </div>
 
-<div class="entry">
-  <div class="row"><span class="role">Credit Equity Audit of India</span><span class="repo">github.com/aakash2410/CreditAudit-India</span></div>
-  <ul class="tight">
-    <li>Two-stage, Heckman-style deep learning model on the NSSO 77th Round separating access to the credit market from allocation of formal versus informal credit. Female-headed households had ~59% of the probability of market entry of male-headed households (disparate impact 0.59).</li>
-    <li>IBM AIF360 adversarial debiasing and SHAP to test for proxy discrimination, reaching near-ideal disparate impact at ~73.2% accuracy. Documented the design's limits: self-reported survey data, collider bias risk, and SHAP as a model diagnostic rather than causal evidence.</li>
-  </ul>
-</div>
-
-<div class="entry">
-  <div class="row"><span class="role">Earlier work</span><span class="meta">2022 – 2023</span></div>
-  <ul class="tight">
-    <li><b>Baby Cry Reason Detection.</b> Cause of an infant's cry from audio: MFCC, spectral contrast and prosodic features over 457 samples, SMOTETomek for class imbalance, soft-voting SVM + KNN ensemble, deployed in a Flutter app with a retraining feedback loop. Team of 3.</li>
-    <li><b>Personality Prediction from CV and Social Media.</b> A 7-layer LSTM reached 0.82–0.85 accuracy on the Big Five against 0.45–0.61 for SVM, logistic regression, gradient boosting and XGBoost (myPersonality: 250 users, 9,917 status updates). Team of 4.</li>
-  </ul>
-</div>
-
-<h2>Publication</h2>
-<p class="kv">Sangani, A., Doshi, P., &amp; Sawant, V. "Unusual Social Media Behavior Detection Using Distributed Data Stream Mining." In <i>Practical Data Mining Techniques and Applications</i>. Auerbach Publications (CRC Press), 2022–23. Clickstream-based bot and hijack detection using per-cluster Very Fast Decision Trees on Apache Spark, with concept-drift handling.</p>
-
-<h2>Education</h2>
-<div class="entry">
-  <div class="row"><span class="role">B.Tech, Information Technology</span><span class="meta">2019 – 2023</span></div>
-  <div class="sub"><span class="org">D. J. Sanghvi College of Engineering, University of Mumbai</span><span>CGPA 8.90 / 10</span></div>
-  <ul class="tight">
-    <li>Merit scholarship covering 100% of tuition. Coursework: Probability &amp; Statistics (O, 93%), Advanced Data Structures (O, 95%), Artificial Intelligence (A+, 84%), Statistical Analysis (A+, 81%), Design &amp; Analysis of Algorithms (A+, 83%), Discrete Structures (A+, 84%).</li>
-  </ul>
-</div>
+<h2>Education and Publication</h2>
+<p class="kv"><b>B.Tech, Information Technology</b>, D. J. Sanghvi College of Engineering, University of Mumbai, 2019–2023. CGPA 8.90 / 10, full merit scholarship. Book chapter: Sangani, A., Doshi, P., &amp; Sawant, V. "Unusual Social Media Behavior Detection Using Distributed Data Stream Mining," Auerbach (CRC Press), 2022–23.</p>
 
 </body>
 </html>
