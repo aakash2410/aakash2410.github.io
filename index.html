@@ -118,8 +118,37 @@
         </div>
 
         <div class="entries" data-sortable data-prefix="2">
+          <!-- Suno Sutra -->
+          <article class="entry" id="suno" data-rank-all="2" data-rank-research="3" data-rank-data="3" data-rank-product="1">
+            <span class="num entry-num">2.2</span>
+            <div class="main">
+              <h3>Suno Sutra</h3>
+              <p class="meta">Digital India Bhashini (MeitY) × Current AI · Edge device · <a href="https://github.com/currentai-org/suno-sutra-hw" target="_blank" rel="noopener">Hardware ↗</a></p>
+              <p>An open-source handheld AI device that runs a vision model, Bhashini's speech recognition and translation, and text-to-speech <em>entirely offline</em>, across India's 22 official languages. No network to fall back on, three models on one small board, and RAM as the binding constraint.</p>
+              <p>I worked on <mark data-for="data">quantising the model stack to INT8 through ONNX</mark> and restructuring inference into <mark data-for="data product">parallel batched streams</mark>. Peak memory fell by 40%. End-to-end latency went from about 8 seconds to 2–3, which is the difference between a device people abandon and one they use.</p>
+
+              <figure class="fig">
+                <div class="plot" role="img" aria-label="End-to-end response latency before and after optimisation: about 8 seconds before, 2 to 3 seconds after.">
+                  <div class="row"><span class="lab">Before</span><span class="track"><i class="dot hollow" style="--x:.8"></i><b class="val left" style="--x:.8">~8s</b></span></div>
+                  <div class="row key"><span class="lab">INT8 + parallel streams</span><span class="track"><i class="seg solid" style="--a:.2;--b:.3"></i><b class="val" style="--x:.3">2–3s</b></span></div>
+                  <div class="row axis"><span class="lab">end-to-end latency</span><span class="track"><i style="--x:0">0</i><i style="--x:.25">2.5s</i><i style="--x:.5">5s</i><i style="--x:.75">7.5s</i><i style="--x:1">10s</i></span></div>
+                </div>
+                <figcaption>Response latency on-device, before and after. <mark data-for="data">Peak memory down 40%</mark> over the same change.</figcaption>
+              </figure>
+
+              <p>On top of the platform I built <b>The Specialist</b>: a grounded offline subject expert for teachers (<a href="https://github.com/aakash2410/SpecialistAISunoSutra" target="_blank" rel="noopener">Source ↗</a>). A teacher asks by voice or points the camera at a textbook page, and the device explains or simplifies it aloud in the local language, answering only from approved DIKSHA content. <mark data-for="research data">Two gates enforce that</mark>: retrieval refuses below a similarity threshold before an LLM call is spent, and the grounded prompt makes the model emit a no-answer signal that the pipeline turns into a refusal. Every answer it does give carries a citation down to chapter, section and page.</p>
+              <p>The embedder is multilingual-e5-small, with a <mark data-for="data">deterministic TF-IDF fallback</mark> fitted at build time so the loop runs with no neural model installed and the refusal threshold stays backend-aware. It deploys as a purely additive overlay: new files only, base platform untouched, installed by an Ansible role with a manifest of exactly what lands where. The DIKSHA harvester is gated pending bulk-download and redistribution licensing.</p>
+              <p>I also designed the evaluation framework for the <mark data-for="research product">VYOMA Innovation Challenge</mark> (₹80 lakh, run by Bhashini, Current AI and Kalpa Impact): the jury rubric, the use-case judging matrix, and the scoring thresholds, through to the finale at IIIT-Delhi.</p>
+            </div>
+            <aside class="notes">
+              <p class="note" data-for="research">A system built to abstain: two refusal gates and a citation on every answer. Plus the scoring framework for a national innovation challenge.</p>
+              <p class="note" data-for="data">Edge inference under a hard memory ceiling: quantisation, batching, and a deterministic embedder so the loop still runs when the neural one is absent.</p>
+              <p class="note" data-for="product">A government-backed device with real users in low-connectivity settings. Latency is the product.</p>
+            </aside>
+          </article>
+
           <!-- IOR -->
-          <article class="entry" id="ior" data-rank-all="1" data-rank-research="1" data-rank-data="1" data-rank-product="2">
+          <article class="entry" id="ior" data-rank-all="1" data-rank-research="1" data-rank-data="1" data-rank-product="3">
             <span class="num entry-num">2.1</span>
             <div class="main">
               <h3>Inverse-Objective Regulator</h3>
@@ -144,7 +173,7 @@
           </article>
 
           <!-- RCA -->
-          <article class="entry" id="rca" data-rank-all="2" data-rank-research="3" data-rank-data="3" data-rank-product="1">
+          <article class="entry" id="rca" data-rank-all="3" data-rank-research="4" data-rank-data="4" data-rank-product="2">
             <span class="num entry-num">2.2</span>
             <div class="main">
               <h3>rag-compliance-auditor</h3>
@@ -165,7 +194,7 @@
           </article>
 
           <!-- CEA -->
-          <article class="entry" id="cea" data-rank-all="3" data-rank-research="2" data-rank-data="2" data-rank-product="3">
+          <article class="entry" id="cea" data-rank-all="4" data-rank-research="2" data-rank-data="2" data-rank-product="4">
             <span class="num entry-num">2.3</span>
             <div class="main">
               <h3>Credit Equity Audit of India</h3>
@@ -194,8 +223,8 @@
         </div>
 
         <div class="entries tail">
-          <article class="entry" id="earlier" data-num="2.4">
-            <span class="num entry-num">2.4</span>
+          <article class="entry" id="earlier" data-num="2.5">
+            <span class="num entry-num">2.5</span>
             <div class="main">
               <h3>Earlier work</h3>
               <p class="meta">University projects · 2022–23</p>
@@ -224,7 +253,10 @@
               <ul>
                 <li>Digital public infrastructure and <mark data-for="research">AI governance</mark> consulting for <mark data-for="product">UNDP, DPGA, the Gates Foundation, and Co-Develop</mark>.</li>
                 <li>With the Principal Scientific Adviser's Office, wrote a section of <em>AGI Governance</em> on <mark data-for="research">AI incident-reporting mechanisms India can adopt</mark>, drawing on the EU AI Act and California's SB-53.</li>
-                <li><mark data-for="data product">Sole PM and builder on an offline RAG system</mark>, built with the Government of India's Bhashini.</li>
+                <li>Quantisation and <mark data-for="data product">parallel inference pipelines on Suno Sutra</mark>, the offline AI device built by Bhashini and Current AI (<a class="ref" href="#suno" data-ref="suno">2.2</a>): 40% less peak memory, latency from ~8s to 2–3s.</li>
+                <li>Built specialist retrieval modules on the device and designed the <mark data-for="research">evaluation framework for the VYOMA Innovation Challenge</mark>: jury rubric, judging matrix and scoring thresholds.</li>
+                <li>Verified <mark data-for="data">edge-AI performance claims</mark> submitted to the Gates Foundation, and wrote the reference architecture for AI-enabled coordinated care over ABDM-connected health systems.</li>
+                <li><mark data-for="product">Built an internal RFP crawler</mark> with a scoring model that ranks incoming opportunities, rebuilt on free sources to run at near-zero cost.</li>
               </ul>
             </div>
             <aside class="notes">
@@ -338,6 +370,7 @@
             <li><mark data-for="research data">Adversarial debiasing</mark>, AIF360 <a class="ref" href="#cea" data-ref="cea">2.3</a></li>
             <li><mark data-for="data product">Agentic AI</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#zs" data-ref="zs">3.2</a></li>
             <li>Apache Spark <a class="ref" href="#p-chapter" data-ref="p-chapter">4.3</a></li>
+            <li><mark data-for="data">ASR, MT and TTS pipelines</mark> <a class="ref" href="#suno" data-ref="suno">2.2</a></li>
             <li>AWS</li>
           </ul></div>
           <div class="ix-group"><h4>B</h4><ul>
@@ -346,7 +379,7 @@
           <div class="ix-group"><h4>C</h4><ul>
             <li><mark data-for="research">California SB-53</mark> <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a> <a class="ref" href="#p-agi" data-ref="p-agi">4.1</a></li>
             <li><mark data-for="product">CI/CD gates</mark> <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
-            <li><mark data-for="data">Class imbalance</mark>, SMOTETomek <a class="ref" href="#earlier" data-ref="earlier">2.4</a></li>
+            <li><mark data-for="data">Class imbalance</mark>, SMOTETomek <a class="ref" href="#earlier" data-ref="earlier">2.5</a></li>
             <li>Concept drift <a class="ref" href="#p-chapter" data-ref="p-chapter">4.3</a></li>
           </ul></div>
           <div class="ix-group"><h4>D</h4><ul>
@@ -355,12 +388,14 @@
           </ul></div>
           <div class="ix-group"><h4>E</h4><ul>
             <li><mark data-for="research product">EU AI Act</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#rca" data-ref="rca">2.2</a> <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a></li>
-            <li><mark data-for="data">Ensembles</mark>, soft-voting <a class="ref" href="#earlier" data-ref="earlier">2.4</a></li>
+            <li><mark data-for="data product">Edge inference</mark>, on-device <a class="ref" href="#suno" data-ref="suno">2.2</a></li>
+            <li><mark data-for="data">Ensembles</mark>, soft-voting <a class="ref" href="#earlier" data-ref="earlier">2.5</a></li>
           </ul></div>
           <div class="ix-group"><h4>F</h4><ul>
-            <li>Flutter <a class="ref" href="#earlier" data-ref="earlier">2.4</a></li>
+            <li>Flutter <a class="ref" href="#earlier" data-ref="earlier">2.5</a></li>
           </ul></div>
           <div class="ix-group"><h4>G–H</h4><ul>
+            <li><mark data-for="research data">Grounding and refusal</mark> <a class="ref" href="#suno" data-ref="suno">2.2</a></li>
             <li>GDPR / DPDP <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
             <li><mark data-for="research data">Heckman-style selection models</mark> <a class="ref" href="#cea" data-ref="cea">2.3</a></li>
             <li>HIPAA <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
@@ -373,15 +408,16 @@
           <div class="ix-group"><h4>J–L</h4><ul>
             <li>JWT certificates, RS256 <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
             <li><mark data-for="research data">LLM evaluation &amp; red-teaming</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a></li>
-            <li><mark data-for="data">LSTM</mark> <a class="ref" href="#earlier" data-ref="earlier">2.4</a></li>
+            <li><mark data-for="data">LSTM</mark> <a class="ref" href="#earlier" data-ref="earlier">2.5</a></li>
           </ul></div>
           <div class="ix-group"><h4>M</h4><ul>
             <li><mark data-for="data product">MCP servers</mark> <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
-            <li><mark data-for="data">MFCCs &amp; spectral features</mark> <a class="ref" href="#earlier" data-ref="earlier">2.4</a></li>
+            <li><mark data-for="data">MFCCs &amp; spectral features</mark> <a class="ref" href="#earlier" data-ref="earlier">2.5</a></li>
             <li>MITRE ATLAS <a class="ref" href="#ior" data-ref="ior">2.1</a></li>
           </ul></div>
           <div class="ix-group"><h4>N–O</h4><ul>
             <li><mark data-for="research">NIST AI RMF</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li>ONNX, INT8 quantisation <a class="ref" href="#suno" data-ref="suno">2.2</a></li>
             <li>OWASP <a class="ref" href="#ior" data-ref="ior">2.1</a></li>
           </ul></div>
           <div class="ix-group"><h4>P</h4><ul>
@@ -389,13 +425,15 @@
             <li><mark data-for="product">Product requirements &amp; logic</mark> <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a> <a class="ref" href="#zs" data-ref="zs">3.2</a></li>
             <li>Python</li>
           </ul></div>
-          <div class="ix-group"><h4>R</h4><ul>
-            <li><mark data-for="data product">RAG</mark> <a class="ref" href="#rca" data-ref="rca">2.2</a> <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a></li>
+          <div class="ix-group"><h4>Q–R</h4><ul>
+            <li><mark data-for="data">Quantisation</mark>, INT8 via ONNX <a class="ref" href="#suno" data-ref="suno">2.2</a></li>
+            <li><mark data-for="data product">RAG</mark> <a class="ref" href="#suno" data-ref="suno">2.2</a> <a class="ref" href="#rca" data-ref="rca">2.4</a> <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a></li>
             <li><mark data-for="product">Referral programmes</mark> <a class="ref" href="#bright" data-ref="bright">3.3</a></li>
           </ul></div>
           <div class="ix-group"><h4>S</h4><ul>
             <li>SARIF reporting <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
             <li>scikit-learn</li>
+            <li><mark data-for="data">Semantic and vector search</mark> <a class="ref" href="#suno" data-ref="suno">2.2</a></li>
             <li>SEBI / RBI <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
             <li><mark data-for="research data">SHAP</mark> <a class="ref" href="#cea" data-ref="cea">2.3</a></li>
             <li><mark data-for="data product">SQL dashboards</mark> <a class="ref" href="#bright" data-ref="bright">3.3</a></li>
@@ -405,7 +443,7 @@
             <li><mark data-for="product">Team leadership</mark> <a class="ref" href="#zs" data-ref="zs">3.2</a></li>
             <li>TensorFlow</li>
             <li>Very Fast Decision Trees <a class="ref" href="#p-chapter" data-ref="p-chapter">4.3</a></li>
-            <li>XGBoost <a class="ref" href="#earlier" data-ref="earlier">2.4</a></li>
+            <li>XGBoost <a class="ref" href="#earlier" data-ref="earlier">2.5</a></li>
           </ul></div>
         </div>
       </section>
