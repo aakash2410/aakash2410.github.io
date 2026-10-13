@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aakash Sangani — Academic CV</title>
+<link rel="stylesheet" href="resume.css">
+</head>
+<body>
+
+<h1 class="name">Aakash Sangani</h1>
+<p class="title">AI governance and auditable AI research</p>
+<p class="contact">Mumbai, India <span>·</span> aakash.sangani2410@gmail.com <span>·</span> linkedin.com/in/aakash-sangani-3149a11a7 <span>·</span> github.com/aakash2410 <span>·</span> aakash2410.github.io</p>
+
+<h2>Research Interests</h2>
+<p class="summary">Auditable and accountable AI systems. Current threads: inferring the revealed objectives of deployed AI agents from their behaviour; the reliability of the evaluators we use to make safety claims; algorithmic fairness in Indian credit markets; and conformity assessment and incident reporting under the EU AI Act and California's SB-53.</p>
+
+<h2>Education</h2>
+<div class="entry">
+  <div class="row"><span class="role">B.Tech, Information Technology</span><span class="meta">2019 – 2023</span></div>
+  <div class="sub"><span class="org">D. J. Sanghvi College of Engineering, University of Mumbai</span><span>CGPA 8.90 / 10</span></div>
+  <ul class="tight">
+    <li>Credit-weighted across eight semesters. Merit-based scholarship covering 100% of tuition.</li>
+    <li>Relevant coursework: Probability &amp; Statistics (O, 93%), Statistical Analysis (A+, 81%), Artificial Intelligence (A+, 84%), Advanced Data Structures (O, 95%), Design and Analysis of Algorithms (A+, 83%), Discrete Structures (A+, 84%).</li>
+  </ul>
+</div>
+
+<h2>Research and Independent Work</h2>
+
+<div class="entry">
+  <div class="row"><span class="role">Inverse-Objective Regulator</span><span class="repo">github.com/aakash2410/Inverse-Objective-Regulator</span></div>
+  <p class="lede"><i>Black-box AI-safety auditing system; sole author of the accompanying arXiv paper.</i></p>
+  <ul class="tight">
+    <li>Infers a deployed agent's revealed objective from its tool-call traces via Bayesian inverse reinforcement learning, scores divergence from its declared purpose, and emits regulator-legible evidence mapped to the EU AI Act, OWASP, MITRE ATLAS and NIST AI RMF.</li>
+    <li>Released an open 8-agent benchmark spanning agentic safety failure modes (reward hacking, power-seeking, sycophancy, privacy leakage, safety-skipping). A deterministic open cross-encoder critic recovers planted objective divergence on 6 of 8 agents (mean r = 0.55), beating a frontier LLM-as-judge (mean r 0.08 → 0.43) with near-zero variance and no API cost.</li>
+    <li>Full Python implementation: Bayesian IRL, LLM and decision-model judges, a reproducible gym, and JSON/SARIF reporting.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row"><span class="role">Credit Equity Audit of India (NSSO 77th Round)</span><span class="repo">github.com/aakash2410/CreditAudit-India</span></div>
+  <p class="lede"><i>Independent fairness audit of household credit access and allocation.</i></p>
+  <ul class="tight">
+    <li>Two-stage, Heckman-style deep learning framework separating access to the credit market from the allocation of formal versus informal credit among households already in it.</li>
+    <li>Female-headed households had about 59% of the probability of entering the credit market compared with male-headed households (disparate impact 0.59), against the conventional 0.8 threshold.</li>
+    <li>Applied IBM AIF360 adversarial debiasing and SHAP to test for proxy discrimination, reaching near-ideal disparate impact at ~73.2% accuracy. Documented the limits of the design: self-reported survey data, collider bias risk, and SHAP as a diagnostic of the model rather than causal evidence.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row"><span class="role">The Specialist, on the Suno Sutra edge platform</span><span class="repo">github.com/aakash2410/SpecialistAISunoSutra</span></div>
+  <p class="lede"><i>Grounded offline retrieval with explicit abstention, on a government-backed edge device.</i></p>
+  <ul class="tight">
+    <li>Built and packaged a subject-expert module for Suno Sutra, the open-source offline AI device from Digital India Bhashini (MeitY) and Current AI, which runs vision, ASR, translation and TTS fully on-device across 22 Indic languages.</li>
+    <li>Answers are grounded in approved DIKSHA content and carry a citation to chapter, section and page. Two gates enforce abstention: retrieval refuses below a similarity threshold before an LLM call is spent, and the grounded prompt makes the model emit a no-answer signal the pipeline converts into a refusal.</li>
+    <li>multilingual-e5-small embeddings with a deterministic, dependency-free TF-IDF fallback fitted at build time, so the loop remains reproducible without a neural model and the refusal threshold stays backend-aware.</li>
+    <li>Harvesting of DIKSHA assets is gated pending bulk-download and offline-redistribution licensing.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row"><span class="role">rag-compliance-auditor</span><span class="repo">github.com/aakash2410/MCP_RAG_Compliance</span></div>
+  <p class="lede"><i>Sole-authored open-source package, published on PyPI.</i></p>
+  <ul class="tight">
+    <li>MCP server that certifies RAG and AI pipelines against the EU AI Act, GDPR/DPDP, HIPAA, SEBI/RBI and NIST AI RMF across 7 audit dimensions.</li>
+    <li>Issues RS256-signed JWT certificates, exposes 8 MCP tools, and runs as a CI/CD gate with SARIF reporting.</li>
+  </ul>
+</div>
+
+<h2>Publications and Policy Writing</h2>
+<div class="entry">
+  <p class="kv"><b>Book chapter.</b> Sangani, A., Doshi, P., &amp; Sawant, V. "Unusual Social Media Behavior Detection Using Distributed Data Stream Mining." In <i>Practical Data Mining Techniques and Applications</i>. Auerbach Publications (CRC Press), 2022–23. Clickstream-based detection of hacked or bot-controlled accounts: users clustered by behaviour, a Very Fast Decision Tree per cluster, parallelised on Apache Spark, with concept-drift handling so genuine behavioural change retrains the model rather than raising a false alarm.</p>
+  <p class="kv"><b>Preprint.</b> Sangani, A. <i>Inverse-Objective Regulator.</i> arXiv system paper, sole author.</p>
+  <p class="kv"><b>Policy.</b> Section on AI incident-reporting mechanisms for India, in <i>AGI Governance</i>, written with the Office of the Principal Scientific Adviser to the Government of India, drawing on the EU AI Act and California's SB-53.</p>
+</div>
+
+<h2>Evaluation and Assessment Design</h2>
+<ul class="tight">
+  <li>Designed the evaluation framework for the <b>VYOMA Innovation Challenge</b> (₹80 lakh, run by Digital India Bhashini, Current AI and Kalpa Impact): jury rubric, use-case judging matrix, and the scoring thresholds applied through to the finale at IIIT-Delhi.</li>
+  <li>Verified edge-AI performance claims submitted to the Gates Foundation, and wrote the reference architecture for AI-enabled coordinated care over ABDM-connected health systems.</li>
+</ul>
+
+<h2>Selected Academic Projects</h2>
+<div class="entry">
+  <div class="row"><span class="role">Baby Cry Reason Detection</span><span class="meta">2022 – 2023</span></div>
+  <div class="sub"><span class="org">Final project, team of 3. Guide: Prof. Prachi Tawde</span></div>
+  <ul class="tight">
+    <li>Audio classifier for the cause of an infant's cry (belly pain, burping, discomfort, hunger, tiredness) on a 457-sample dataset, using temporal, spectral, cepstral and prosodic features (MFCCs, spectral contrast, pitch).</li>
+    <li>Addressed class imbalance with SMOTETomek; final model a soft-voting SVM + KNN ensemble, deployed in a Flutter app with a feedback loop for retraining.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="row"><span class="role">Personality Prediction with CV and Social Media Analysis</span><span class="meta">2022</span></div>
+  <div class="sub"><span class="org">Team project, team of 4. Guide: Neha Ram</span></div>
+  <ul class="tight">
+    <li>Combined CV text analysis with Facebook behavioural data (myPersonality: 250 users, 9,917 status updates) to predict the Big Five traits. A 7-layer LSTM reached 0.82–0.85 accuracy, against 0.45–0.61 for SVM, logistic regression, gradient boosting and XGBoost baselines.</li>
+  </ul>
+</div>
+
+<h2>Professional Experience</h2>
+<div class="entry">
+  <div class="row"><span class="role">AI Consultant</span><span class="meta">Feb 2026 – present</span></div>
+  <div class="sub"><span class="org">Kalpa Impact</span><span>Mumbai</span></div>
+  <ul class="tight">
+    <li>Digital public infrastructure and AI governance consulting for UNDP, DPGA, the Gates Foundation and Co-Develop.</li>
+    <li>Quantised the speech and vision models to INT8 via ONNX and restructured inference into parallel batched streams on Suno Sutra: peak memory down 40%, end-to-end latency from ~8s to 2–3s.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="row"><span class="role">Business Technology Solutions Associate → Senior Associate</span><span class="meta">Sep 2023 – Jan 2026</span></div>
+  <div class="sub"><span class="org">ZS Associates</span><span>Pune</span></div>
+  <ul class="tight">
+    <li>Launched an agentic AI analytics product for natural-language querying of sales-performance metrics. Owned incentive-compensation product logic for a Fortune 100 pharma client at 100% accuracy. Led a team of 4.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="row"><span class="role">Product Analyst Intern</span><span class="meta">Jul 2022 – Feb 2023</span></div>
+  <div class="sub"><span class="org">Bright Money</span><span>Bangalore</span></div>
+  <ul class="tight">
+    <li>Built A/B testing infrastructure and SQL dashboards. Launched a referral programme that saved $120K in customer-acquisition cost over 5 months.</li>
+  </ul>
+</div>
+
+<h2>Technical Skills</h2>
+<p class="kv"><b>Methods:</b> Bayesian inverse reinforcement learning, LLM evaluation and red-teaming, algorithmic fairness (AIF360, SHAP), Heckman-style selection models, A/B testing, RAG, MCP servers, INT8 quantisation and edge inference</p>
+<p class="kv"><b>Frameworks:</b> EU AI Act, NIST AI RMF, ISO 42001, GDPR/DPDP, HIPAA, OWASP ASI, MITRE ATLAS</p>
+<p class="kv"><b>Tools:</b> Python, SQL, ONNX, PyTorch-adjacent tooling (sentence-transformers), TensorFlow, scikit-learn, pandas, PostgreSQL, Apache Spark, Docker, Ansible, AWS</p>
+
+<h2>Honours</h2>
+<ul class="tight">
+  <li>Merit-based scholarship, 100% tuition waiver, D. J. Sanghvi College of Engineering (2019 – 2023).</li>
+  <li>Recognised as a top 1% performer firm-wide at ZS Associates; promoted to Senior Associate within 8 to 10 months of joining.</li>
+</ul>
+
+</body>
+</html>

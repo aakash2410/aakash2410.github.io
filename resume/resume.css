@@ -1,0 +1,87 @@
+/* Print stylesheet for the three résumés. Rendered to PDF with headless Chrome. */
+
+@page {
+  size: letter;
+  margin: 0.5in 0.55in;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font: 10.3pt/1.42 Charter, Georgia, "Times New Roman", serif;
+  color: #16161a;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ---------- Header ---------- */
+.name {
+  font-size: 22pt;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+.title {
+  text-align: center;
+  font-size: 10.5pt;
+  font-style: italic;
+  color: #3c3c42;
+  margin: 2pt 0 4pt;
+}
+.contact {
+  text-align: center;
+  font-size: 9pt;
+  color: #3c3c42;
+  margin: 0 0 10pt;
+}
+.contact span { margin: 0 3pt; color: #9a9aa2; }
+
+/* ---------- Sections ---------- */
+h2 {
+  font-size: 9pt;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 11pt 0 4pt;
+  padding-bottom: 2pt;
+  border-bottom: 0.8pt solid #16161a;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.entry { margin-bottom: 7pt; break-inside: avoid; page-break-inside: avoid; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10pt;
+}
+.role { font-weight: 600; }
+.org { font-style: italic; }
+.meta { font-size: 9pt; color: #44444b; white-space: nowrap; }
+.sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10pt;
+  font-size: 9.5pt;
+  color: #44444b;
+}
+
+ul { margin: 2pt 0 0; padding-left: 12pt; }
+li { margin: 1.5pt 0; }
+li::marker { color: #77777e; }
+
+p.lede { margin: 0 0 2pt; }
+p.summary { margin: 0; }
+
+.repo { font-size: 8.8pt; color: #44444b; font-family: "SF Mono", Menlo, monospace; }
+.kv { font-size: 9.8pt; margin: 1.5pt 0; }
+.kv b { font-weight: 600; }
+.tight li { margin: 1pt 0; }
