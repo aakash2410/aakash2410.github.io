@@ -125,15 +125,15 @@
               <h3>Suno Sutra</h3>
               <p class="meta">Digital India Bhashini (MeitY) × Current AI · Edge device · <a href="https://github.com/currentai-org/suno-sutra-hw" target="_blank" rel="noopener">Hardware ↗</a></p>
               <p>An open-source handheld AI device that runs a vision model, Bhashini's speech recognition and translation, and text-to-speech <em>entirely offline</em>, across India's 22 official languages. No network to fall back on, three models on one small board, and RAM as the binding constraint.</p>
-              <p>I worked on <mark data-for="data">quantising the platform’s speech and vision models to INT8 through ONNX</mark> and restructuring inference into <mark data-for="data product">parallel batched streams</mark>. Peak memory fell by 40%. End-to-end latency went from about 8 seconds to 2–3, which is the difference between a device people abandon and one they use.</p>
+              <p>I designed the <mark data-for="data">inference pipeline</mark>: how work is batched and scheduled across the three models under a hard RAM ceiling, and the <mark data-for="data product">benchmarking that drove those tradeoffs</mark>. Latency to first audio fell from about 8 seconds to 2–3, and peak memory by 40%, alongside the team’s INT8 conversion through ONNX.</p>
 
               <figure class="fig">
-                <div class="plot" role="img" aria-label="End-to-end response latency before and after optimisation: about 8 seconds before, 2 to 3 seconds after.">
+                <div class="plot" role="img" aria-label="Latency to first audio before and after: about 8 seconds before, 2 to 3 seconds after.">
                   <div class="row"><span class="lab">Before</span><span class="track"><i class="dot hollow" style="--x:.8"></i><b class="val left" style="--x:.8">~8s</b></span></div>
-                  <div class="row key"><span class="lab">INT8 + parallel streams</span><span class="track"><i class="seg solid" style="--a:.2;--b:.3"></i><b class="val" style="--x:.3">2–3s</b></span></div>
-                  <div class="row axis"><span class="lab">end-to-end latency</span><span class="track"><i style="--x:0">0</i><i style="--x:.25">2.5s</i><i style="--x:.5">5s</i><i style="--x:.75">7.5s</i><i style="--x:1">10s</i></span></div>
+                  <div class="row key"><span class="lab">After pipeline redesign</span><span class="track"><i class="seg solid" style="--a:.2;--b:.3"></i><b class="val" style="--x:.3">2–3s</b></span></div>
+                  <div class="row axis"><span class="lab">latency to first audio</span><span class="track"><i style="--x:0">0</i><i style="--x:.25">2.5s</i><i style="--x:.5">5s</i><i style="--x:.75">7.5s</i><i style="--x:1">10s</i></span></div>
                 </div>
-                <figcaption>Response latency on-device, before and after. <mark data-for="data">Peak memory down 40%</mark> over the same change.</figcaption>
+                <figcaption>Latency to first audio on-device, before and after. <mark data-for="data">Peak memory down 40%</mark> over the same change.</figcaption>
               </figure>
 
               <p>On top of the platform I built <b>The Specialist</b>: a grounded offline subject expert for teachers (<a href="https://github.com/aakash2410/SpecialistAISunoSutra" target="_blank" rel="noopener">Source ↗</a>). A teacher asks by voice or points the camera at a textbook page, and the device explains or simplifies it aloud in the local language, answering only from approved DIKSHA content. <mark data-for="research data">Two gates enforce that</mark>: retrieval refuses below a similarity threshold before an LLM call is spent, and the grounded prompt makes the model emit a no-answer signal that the pipeline turns into a refusal. Every answer it does give carries a citation down to chapter, section and page.</p>
@@ -142,7 +142,7 @@
             </div>
             <aside class="notes">
               <p class="note" data-for="research">A system built to abstain: two refusal gates and a citation on every answer. Plus the scoring framework for a national innovation challenge.</p>
-              <p class="note" data-for="data">Edge inference under a hard memory ceiling: quantisation, batching, and a deterministic embedder so the loop still runs when the neural one is absent.</p>
+              <p class="note" data-for="data">Edge inference under a hard memory ceiling: batching tradeoffs, measured rather than guessed, and a deterministic embedder so the loop still runs when the neural one is absent.</p>
               <p class="note" data-for="product">A government-backed device with real users in low-connectivity settings. Latency is the product.</p>
             </aside>
           </article>
@@ -253,7 +253,7 @@
               <ul>
                 <li>Digital public infrastructure and <mark data-for="research">AI governance</mark> consulting for <mark data-for="product">UNDP, DPGA, the Gates Foundation, and Co-Develop</mark>.</li>
                 <li>With the Principal Scientific Adviser's Office, wrote a section of <em>AGI Governance</em> on <mark data-for="research">AI incident-reporting mechanisms India can adopt</mark>, drawing on the EU AI Act and California's SB-53.</li>
-                <li>Quantisation and <mark data-for="data product">parallel inference pipelines on Suno Sutra</mark>, the offline AI device built by Bhashini and Current AI (<a class="ref" href="#suno" data-ref="suno">2.2</a>): 40% less peak memory, latency from ~8s to 2–3s.</li>
+                <li>Designed the <mark data-for="data product">inference pipeline and benchmarking for Suno Sutra</mark>, the offline AI device built by Bhashini and Current AI (<a class="ref" href="#suno" data-ref="suno">2.2</a>): batching under a hard RAM ceiling cut latency to first audio from ~8s to 2–3s and peak memory by 40%.</li>
                 <li>Built and packaged a grounded retrieval module for the device, and designed the <mark data-for="research">evaluation framework for the VYOMA Innovation Challenge</mark>: jury rubric, judging matrix and scoring thresholds.</li>
                 <li>Verified <mark data-for="data">edge-AI performance claims</mark> submitted to the Gates Foundation, and wrote the reference architecture for AI-enabled coordinated care over ABDM-connected health systems.</li>
                 <li><mark data-for="product">Built an internal RFP crawler</mark> with a scoring model that ranks incoming opportunities, rebuilt on free sources to run at near-zero cost.</li>

@@ -46,7 +46,7 @@
   <ul class="tight">
     <li>Grounded offline retrieval with explicit abstention on the open-source AI device from Digital India Bhashini (MeitY) and Current AI, which runs vision, ASR, translation and TTS on-device across 22 Indic languages. Answers are grounded in approved DIKSHA content and carry a citation to chapter, section and page.</li>
     <li>Two gates enforce abstention: retrieval refuses below a similarity threshold before an LLM call is spent, and the grounded prompt makes the model emit a no-answer signal the pipeline converts into a refusal. multilingual-e5-small embeddings with a deterministic TF-IDF fallback keep the loop reproducible without a neural model.</li>
-    <li>Also quantised the platform's speech and vision models to INT8 via ONNX with parallel batched inference: peak memory down 40%, end-to-end latency ~8s → 2–3s.</li>
+    <li>Designed the device's inference pipeline and owned the benchmarking behind it: batching and scheduling tradeoffs across three concurrent models under a hard RAM ceiling cut latency to first audio from ~8s to 2–3s and peak memory by 40%.</li>
   </ul>
 </div>
 
@@ -89,7 +89,7 @@
 </div>
 
 <h2>Skills and Honours</h2>
-<p class="kv"><b>Methods:</b> Bayesian inverse RL, LLM evaluation and red-teaming, algorithmic fairness (AIF360, SHAP), Heckman-style selection models, RAG, INT8 quantisation and edge inference, A/B testing</p>
+<p class="kv"><b>Methods:</b> Bayesian inverse RL, LLM evaluation and red-teaming, algorithmic fairness (AIF360, SHAP), Heckman-style selection models, RAG, edge inference and benchmarking, A/B testing</p>
 <p class="kv"><b>Tools:</b> Python, SQL, ONNX, sentence-transformers, TensorFlow, scikit-learn, pandas, PostgreSQL, Apache Spark, Docker, Ansible, AWS</p>
 <p class="kv"><b>Honours:</b> full-tuition merit scholarship, D. J. Sanghvi College of Engineering (2019–2023); top 1% performer firm-wide at ZS Associates, promoted within 8–10 months.</p>
 
