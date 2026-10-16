@@ -85,7 +85,7 @@
             </div>
             <div>
               <dt>Published</dt>
-              <dd><mark data-for="research">A book chapter with CRC Press · an arXiv system paper, sole author</mark></dd>
+              <dd><mark data-for="research">A book chapter with CRC Press · a working paper on agent auditing, sole author</mark></dd>
             </div>
             <div>
               <dt>Released</dt>
@@ -118,6 +118,31 @@
         </div>
 
         <div class="entries" data-sortable data-prefix="2">
+          <!-- IOR -->
+          <article class="entry" id="ior" data-rank-all="1" data-rank-research="1" data-rank-data="1" data-rank-product="3">
+            <span class="num entry-num">2.1</span>
+            <div class="main">
+              <h3>Inverse-Objective Regulator</h3>
+              <p class="meta">Research system · Sole author · <a href="https://github.com/aakash2410/Inverse-Objective-Regulator" target="_blank" rel="noopener">Source ↗</a></p>
+              <p>A black-box auditor that works out what a deployed AI agent is <em>actually</em> optimising for, using only its tool-call traces. <mark data-for="research data">Bayesian inverse reinforcement learning</mark> recovers the agent's revealed objective and scores how far it drifts from its declared purpose. The output is <mark data-for="product">evidence a regulator can read</mark>, mapped to the EU AI Act, OWASP, MITRE ATLAS, and NIST AI RMF and emitted as JSON and SARIF.</p>
+              <p>It ships with <mark data-for="research">an open 8-agent benchmark</mark> of agentic failure modes: reward hacking, power-seeking, sycophancy, privacy leakage, and safety-skipping.</p>
+
+              <figure class="fig">
+                <div class="plot" role="img" aria-label="Mean correlation with planted objective divergence. Frontier LLM-as-judge ranges from 0.08 to 0.43. Open cross-encoder critic: 0.55.">
+                  <div class="row"><span class="lab">Frontier LLM-as-judge</span><span class="track"><i class="seg" style="--a:.08;--b:.43"></i><b class="val" style="--x:.43">0.08 → 0.43</b></span></div>
+                  <div class="row key"><span class="lab">Open cross-encoder critic</span><span class="track"><i class="dot" style="--x:.55"></i><b class="val" style="--x:.55">0.55</b></span></div>
+                  <div class="row axis"><span class="lab">mean r</span><span class="track"><i style="--x:0">0</i><i style="--x:.25">.25</i><i style="--x:.5">.50</i><i style="--x:.75">.75</i><i style="--x:1">1</i></span></div>
+                </div>
+                <figcaption>Correlation with planted objective divergence across the benchmark. The critic recovers divergence in <mark data-for="data">6 of 8 agents, deterministically and with no API cost</mark>.</figcaption>
+              </figure>
+            </div>
+            <aside class="notes">
+              <p class="note" data-for="research">Sole-authored working paper accompanies it. The benchmark is public, so others can test their auditors against it.</p>
+              <p class="note" data-for="data">Bayesian IRL, LLM and decision-model judges, and a reproducible gym. The open critic has near-zero variance where the LLM judge doesn't.</p>
+              <p class="note" data-for="product">Turns an abstract safety risk into evidence a regulator can use, in formats that existing security tooling already reads.</p>
+            </aside>
+          </article>
+
           <!-- Suno Sutra -->
           <article class="entry" id="suno" data-rank-all="2" data-rank-research="3" data-rank-data="3" data-rank-product="1">
             <span class="num entry-num">2.2</span>
@@ -143,42 +168,17 @@
             <aside class="notes">
               <p class="note" data-for="research">A system built to abstain: two refusal gates and a citation on every answer. Plus the scoring framework for a national innovation challenge.</p>
               <p class="note" data-for="data">Edge inference under a hard memory ceiling: batching tradeoffs, measured rather than guessed, and a deterministic embedder so the loop still runs when the neural one is absent.</p>
-              <p class="note" data-for="product">A government-backed device with real users in low-connectivity settings. Latency is the product.</p>
-            </aside>
-          </article>
-
-          <!-- IOR -->
-          <article class="entry" id="ior" data-rank-all="1" data-rank-research="1" data-rank-data="1" data-rank-product="3">
-            <span class="num entry-num">2.1</span>
-            <div class="main">
-              <h3>Inverse-Objective Regulator</h3>
-              <p class="meta">Research system · Sole author · <a href="https://github.com/aakash2410/Inverse-Objective-Regulator" target="_blank" rel="noopener">Source ↗</a></p>
-              <p>A black-box auditor that works out what a deployed AI agent is <em>actually</em> optimising for, using only its tool-call traces. <mark data-for="research data">Bayesian inverse reinforcement learning</mark> recovers the agent's revealed objective and scores how far it drifts from its declared purpose. The output is <mark data-for="product">evidence a regulator can read</mark>, mapped to the EU AI Act, OWASP, MITRE ATLAS, and NIST AI RMF and emitted as JSON and SARIF.</p>
-              <p>It ships with <mark data-for="research">an open 8-agent benchmark</mark> of agentic failure modes: reward hacking, power-seeking, sycophancy, privacy leakage, and safety-skipping.</p>
-
-              <figure class="fig">
-                <div class="plot" role="img" aria-label="Mean correlation with planted objective divergence. Frontier LLM-as-judge ranges from 0.08 to 0.43. Open cross-encoder critic: 0.55.">
-                  <div class="row"><span class="lab">Frontier LLM-as-judge</span><span class="track"><i class="seg" style="--a:.08;--b:.43"></i><b class="val" style="--x:.43">0.08 → 0.43</b></span></div>
-                  <div class="row key"><span class="lab">Open cross-encoder critic</span><span class="track"><i class="dot" style="--x:.55"></i><b class="val" style="--x:.55">0.55</b></span></div>
-                  <div class="row axis"><span class="lab">mean r</span><span class="track"><i style="--x:0">0</i><i style="--x:.25">.25</i><i style="--x:.5">.50</i><i style="--x:.75">.75</i><i style="--x:1">1</i></span></div>
-                </div>
-                <figcaption>Correlation with planted objective divergence across the benchmark. The critic recovers divergence in <mark data-for="data">6 of 8 agents, deterministically and with no API cost</mark>.</figcaption>
-              </figure>
-            </div>
-            <aside class="notes">
-              <p class="note" data-for="research">Sole-authored arXiv system paper. The benchmark is public, so others can test their auditors against it.</p>
-              <p class="note" data-for="data">Bayesian IRL, LLM and decision-model judges, and a reproducible gym. The open critic has near-zero variance where the LLM judge doesn't.</p>
-              <p class="note" data-for="product">Turns an abstract safety risk into evidence a regulator can use, in formats that existing security tooling already reads.</p>
+              <p class="note" data-for="product">A government-backed device used in low-connectivity settings, where response time decides whether it gets used at all.</p>
             </aside>
           </article>
 
           <!-- RCA -->
           <article class="entry" id="rca" data-rank-all="3" data-rank-research="4" data-rank-data="4" data-rank-product="2">
-            <span class="num entry-num">2.2</span>
+            <span class="num entry-num">2.3</span>
             <div class="main">
               <h3>rag-compliance-auditor</h3>
-              <p class="meta">Open-source package on PyPI · Built solo · <a href="https://github.com/aakash2410/MCP_RAG_Compliance" target="_blank" rel="noopener">Source ↗</a></p>
-              <p>An MCP server that certifies RAG and AI pipelines against the EU AI Act, GDPR/DPDP, HIPAA, SEBI/RBI, and NIST AI RMF. It <mark data-for="product">runs as a CI/CD gate</mark>, so compliance becomes a check that fails a build instead of a document that sits in a drawer.</p>
+              <p class="meta">Open-source package on PyPI · Built solo · <a href="https://github.com/aakash2410/MCP_RAG_Compliance" target="_blank" rel="noopener">Source ↗</a> · <a href="https://pypi.org/project/rag-compliance-auditor/" target="_blank" rel="noopener">PyPI ↗</a></p>
+              <p>An MCP server that audits RAG and AI pipelines against the EU AI Act, GDPR/DPDP, HIPAA, SEBI/RBI, and NIST AI RMF, and issues signed audit reports. It <mark data-for="product">runs as a CI/CD gate</mark>, so the checks run on every build rather than once a year.</p>
               <dl class="spec">
                 <div><dt>7</dt><dd>audit dimensions</dd></div>
                 <div><dt>8</dt><dd>MCP tools</dd></div>
@@ -195,7 +195,7 @@
 
           <!-- CEA -->
           <article class="entry" id="cea" data-rank-all="4" data-rank-research="2" data-rank-data="2" data-rank-product="4">
-            <span class="num entry-num">2.3</span>
+            <span class="num entry-num">2.4</span>
             <div class="main">
               <h3>Credit Equity Audit of India</h3>
               <p class="meta">Independent fairness audit · NSSO 77th Round · <a href="https://github.com/aakash2410/CreditAudit-India" target="_blank" rel="noopener">Source ↗</a></p>
@@ -205,16 +205,16 @@
                 <div class="plot" role="img" aria-label="Relative probability of entering the credit market. Male-headed households: 1.00. Female-headed households: 0.59, below the 0.8 four-fifths threshold.">
                   <i class="thresh" style="--x:.8"><span>four-fifths rule</span></i>
                   <div class="row"><span class="lab">Male-headed households</span><span class="track"><i class="dot hollow" style="--x:1"></i><b class="val left" style="--x:1">1.00</b></span></div>
-                  <div class="row key"><span class="lab">Female-headed households</span><span class="track"><i class="dot" style="--x:.59"></i><b class="val left" style="--x:.59">0.59</b></span></div>
+                  <div class="row key"><span class="lab">Female-headed, before debiasing</span><span class="track"><i class="dot" style="--x:.59"></i><b class="val left" style="--x:.59">0.59</b></span></div>
                   <div class="row axis"><span class="lab">relative P(entry)</span><span class="track"><i style="--x:0">0</i><i style="--x:.25">.25</i><i style="--x:.5">.50</i><i style="--x:.75">.75</i><i style="--x:1">1</i></span></div>
                 </div>
-                <figcaption>Probability of entering the credit market, relative to male-headed households. <mark data-for="research product">A disparate impact of 0.59</mark>, well below the conventional 0.8 threshold.</figcaption>
+                <figcaption>Measured baseline: probability of entering the credit market relative to male-headed households. <mark data-for="research product">A disparate impact of 0.59</mark>, well below the conventional 0.8 threshold. Adversarial debiasing closes most of that gap, at ~73.2% accuracy.</figcaption>
               </figure>
 
               <p class="aside-p"><mark data-for="research">The audit states its own limits</mark>: self-reported survey data, the risk of collider bias, and SHAP as a diagnostic of the model rather than causal evidence.</p>
             </div>
             <aside class="notes">
-              <p class="note" data-for="research">Treats access as a selection problem before asking about allocation. Being honest about limits is part of the result.</p>
+              <p class="note" data-for="research">Treats access as a selection problem before asking about allocation.</p>
               <p class="note" data-for="data">Stage 1 predicts market participation, stage 2 predicts formal vs. informal allocation.</p>
               <p class="note" data-for="product">A 0.59 is the kind of number a lender or regulator has to act on.</p>
             </aside>
@@ -230,7 +230,6 @@
               <p class="meta">University projects · 2022–23</p>
               <ul>
                 <li><b>Baby Cry Reason Detection.</b> Why an infant is crying, from audio alone: <mark data-for="data">MFCC, spectral contrast, and prosodic features</mark> over 457 samples, SMOTETomek for class imbalance, and a soft-voting SVM + KNN ensemble, shipped in a Flutter app with a feedback loop for retraining. Team of 3.</li>
-                <li><b>Personality Prediction from CV and Social Media.</b> A 7-layer LSTM reached <mark data-for="data">0.82–0.85 accuracy on the Big Five, against 0.45–0.61</mark> for SVM, logistic regression, gradient boosting, and XGBoost (myPersonality: 250 users, 9,917 status updates). Team of 4.</li>
               </ul>
             </div>
           </article>
@@ -316,7 +315,7 @@
           <li class="entry" id="p-arxiv" data-num="4.2">
             <span class="num entry-num">4.2</span>
             <div class="main">
-              <p class="cite"><mark data-for="research">Sangani, A.</mark> <em>Inverse-Objective Regulator</em>. arXiv system paper, sole author.</p>
+              <p class="cite"><mark data-for="research">Sangani, A.</mark> <em>Inverse-Objective Regulator</em>. Working paper, sole author.</p>
               <p class="gloss">The paper behind <a class="ref" href="#ior" data-ref="ior">2.1</a>. <a href="https://github.com/aakash2410/Inverse-Objective-Regulator" target="_blank" rel="noopener">Code ↗</a></p>
             </div>
           </li>
@@ -367,7 +366,7 @@
         <div class="index">
           <div class="ix-group"><h4>A</h4><ul>
             <li><mark data-for="data product">A/B testing</mark> <a class="ref" href="#bright" data-ref="bright">3.3</a></li>
-            <li><mark data-for="research data">Adversarial debiasing</mark>, AIF360 <a class="ref" href="#cea" data-ref="cea">2.3</a></li>
+            <li><mark data-for="research data">Adversarial debiasing</mark>, AIF360 <a class="ref" href="#cea" data-ref="cea">2.4</a></li>
             <li><mark data-for="data product">Agentic AI</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#zs" data-ref="zs">3.2</a></li>
             <li>Apache Spark <a class="ref" href="#p-chapter" data-ref="p-chapter">4.3</a></li>
             <li><mark data-for="data">ASR, MT and TTS pipelines</mark> <a class="ref" href="#suno" data-ref="suno">2.2</a></li>
@@ -378,16 +377,16 @@
           </ul></div>
           <div class="ix-group"><h4>C</h4><ul>
             <li><mark data-for="research">California SB-53</mark> <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a> <a class="ref" href="#p-agi" data-ref="p-agi">4.1</a></li>
-            <li><mark data-for="product">CI/CD gates</mark> <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li><mark data-for="product">CI/CD gates</mark> <a class="ref" href="#rca" data-ref="rca">2.3</a></li>
             <li><mark data-for="data">Class imbalance</mark>, SMOTETomek <a class="ref" href="#earlier" data-ref="earlier">2.5</a></li>
             <li>Concept drift <a class="ref" href="#p-chapter" data-ref="p-chapter">4.3</a></li>
           </ul></div>
           <div class="ix-group"><h4>D</h4><ul>
-            <li><mark data-for="research data">Disparate impact</mark> <a class="ref" href="#cea" data-ref="cea">2.3</a></li>
+            <li><mark data-for="research data">Disparate impact</mark> <a class="ref" href="#cea" data-ref="cea">2.4</a></li>
             <li>Docker</li>
           </ul></div>
           <div class="ix-group"><h4>E</h4><ul>
-            <li><mark data-for="research product">EU AI Act</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#rca" data-ref="rca">2.2</a> <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a></li>
+            <li><mark data-for="research product">EU AI Act</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#rca" data-ref="rca">2.3</a> <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a></li>
             <li><mark data-for="data product">Edge inference</mark>, on-device <a class="ref" href="#suno" data-ref="suno">2.2</a></li>
             <li><mark data-for="data">Ensembles</mark>, soft-voting <a class="ref" href="#earlier" data-ref="earlier">2.5</a></li>
           </ul></div>
@@ -396,27 +395,26 @@
           </ul></div>
           <div class="ix-group"><h4>G–H</h4><ul>
             <li><mark data-for="research data">Grounding and refusal</mark> <a class="ref" href="#suno" data-ref="suno">2.2</a></li>
-            <li>GDPR / DPDP <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
-            <li><mark data-for="research data">Heckman-style selection models</mark> <a class="ref" href="#cea" data-ref="cea">2.3</a></li>
-            <li>HIPAA <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li>GDPR / DPDP <a class="ref" href="#rca" data-ref="rca">2.3</a></li>
+            <li><mark data-for="research data">Heckman-style selection models</mark> <a class="ref" href="#cea" data-ref="cea">2.4</a></li>
+            <li>HIPAA <a class="ref" href="#rca" data-ref="rca">2.3</a></li>
           </ul></div>
           <div class="ix-group"><h4>I</h4><ul>
             <li><mark data-for="product">Incentive-compensation logic</mark> <a class="ref" href="#zs" data-ref="zs">3.2</a></li>
             <li><mark data-for="research">Incident reporting</mark> <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a> <a class="ref" href="#p-agi" data-ref="p-agi">4.1</a></li>
-            <li>ISO 42001</li>
           </ul></div>
           <div class="ix-group"><h4>J–L</h4><ul>
-            <li>JWT certificates, RS256 <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li>JWT certificates, RS256 <a class="ref" href="#rca" data-ref="rca">2.3</a></li>
             <li><mark data-for="research data">LLM evaluation &amp; red-teaming</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a></li>
             <li><mark data-for="data">LSTM</mark> <a class="ref" href="#earlier" data-ref="earlier">2.5</a></li>
           </ul></div>
           <div class="ix-group"><h4>M</h4><ul>
-            <li><mark data-for="data product">MCP servers</mark> <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li><mark data-for="data product">MCP servers</mark> <a class="ref" href="#rca" data-ref="rca">2.3</a></li>
             <li><mark data-for="data">MFCCs &amp; spectral features</mark> <a class="ref" href="#earlier" data-ref="earlier">2.5</a></li>
             <li>MITRE ATLAS <a class="ref" href="#ior" data-ref="ior">2.1</a></li>
           </ul></div>
           <div class="ix-group"><h4>N–O</h4><ul>
-            <li><mark data-for="research">NIST AI RMF</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li><mark data-for="research">NIST AI RMF</mark> <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#rca" data-ref="rca">2.3</a></li>
             <li>ONNX, INT8 quantisation <a class="ref" href="#suno" data-ref="suno">2.2</a></li>
             <li>OWASP <a class="ref" href="#ior" data-ref="ior">2.1</a></li>
           </ul></div>
@@ -431,11 +429,11 @@
             <li><mark data-for="product">Referral programmes</mark> <a class="ref" href="#bright" data-ref="bright">3.3</a></li>
           </ul></div>
           <div class="ix-group"><h4>S</h4><ul>
-            <li>SARIF reporting <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
+            <li>SARIF reporting <a class="ref" href="#ior" data-ref="ior">2.1</a> <a class="ref" href="#rca" data-ref="rca">2.3</a></li>
             <li>scikit-learn</li>
             <li><mark data-for="data">Semantic and vector search</mark> <a class="ref" href="#suno" data-ref="suno">2.2</a></li>
-            <li>SEBI / RBI <a class="ref" href="#rca" data-ref="rca">2.2</a></li>
-            <li><mark data-for="research data">SHAP</mark> <a class="ref" href="#cea" data-ref="cea">2.3</a></li>
+            <li>SEBI / RBI <a class="ref" href="#rca" data-ref="rca">2.3</a></li>
+            <li><mark data-for="research data">SHAP</mark> <a class="ref" href="#cea" data-ref="cea">2.4</a></li>
             <li><mark data-for="data product">SQL dashboards</mark> <a class="ref" href="#bright" data-ref="bright">3.3</a></li>
             <li><mark data-for="product">Stakeholders</mark>: government, multilateral <a class="ref" href="#kalpa" data-ref="kalpa">3.1</a></li>
           </ul></div>
