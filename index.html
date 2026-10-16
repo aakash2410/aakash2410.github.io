@@ -128,12 +128,12 @@
               <p>It ships with <mark data-for="research">an open 8-agent benchmark</mark> of agentic failure modes: reward hacking, power-seeking, sycophancy, privacy leakage, and safety-skipping.</p>
 
               <figure class="fig">
-                <div class="plot" role="img" aria-label="Mean correlation with planted objective divergence. Frontier LLM-as-judge ranges from 0.08 to 0.43. Open cross-encoder critic: 0.55.">
-                  <div class="row"><span class="lab">Frontier LLM-as-judge</span><span class="track"><i class="seg" style="--a:.08;--b:.43"></i><b class="val" style="--x:.43">0.08 → 0.43</b></span></div>
-                  <div class="row key"><span class="lab">Open cross-encoder critic</span><span class="track"><i class="dot" style="--x:.55"></i><b class="val" style="--x:.55">0.55</b></span></div>
+                <div class="plot" role="img" aria-label="Correlation with planted objective divergence across eight agents. Frontier LLM-as-judge ranges from 0.08 to 0.43 depending on the agent. Open cross-encoder critic: 0.55 mean.">
+                  <div class="row"><span class="lab">Frontier LLM-as-judge, per agent</span><span class="track"><i class="seg" style="--a:.08;--b:.43"></i><b class="val" style="--x:.43">0.08–0.43</b></span></div>
+                  <div class="row key"><span class="lab">Open critic, mean</span><span class="track"><i class="dot" style="--x:.55"></i><b class="val" style="--x:.55">0.55</b></span></div>
                   <div class="row axis"><span class="lab">mean r</span><span class="track"><i style="--x:0">0</i><i style="--x:.25">.25</i><i style="--x:.5">.50</i><i style="--x:.75">.75</i><i style="--x:1">1</i></span></div>
                 </div>
-                <figcaption>Correlation with planted objective divergence across the benchmark. The critic recovers divergence in <mark data-for="data">6 of 8 agents, deterministically and with no API cost</mark>.</figcaption>
+                <figcaption>Correlation with planted objective divergence. The LLM-as-judge spans 0.08 to 0.43 depending on which agent it scores; the open critic averages 0.55 and recovers divergence in <mark data-for="data">6 of 8 agents, deterministically and with no API cost</mark>.</figcaption>
               </figure>
             </div>
             <aside class="notes">
@@ -199,7 +199,7 @@
             <div class="main">
               <h3>Credit Equity Audit of India</h3>
               <p class="meta">Independent fairness audit · NSSO 77th Round · <a href="https://github.com/aakash2410/CreditAudit-India" target="_blank" rel="noopener">Source ↗</a></p>
-              <p>Who gets credit in India, and on what terms? A <mark data-for="research data">two-stage, Heckman-style deep learning model</mark> separates <em>access</em> to the credit market from the <em>allocation</em> of formal versus informal credit among households already in it. <mark data-for="data">IBM AIF360 adversarial debiasing and SHAP</mark> then test for proxy discrimination, reaching near-ideal disparate impact at ~73.2% accuracy.</p>
+              <p>Who gets credit in India, and on what terms? A <mark data-for="research data">two-stage, Heckman-style deep learning model</mark> separates <em>access</em> to the credit market from the <em>allocation</em> of formal versus informal credit among households already in it. <mark data-for="data">IBM AIF360 adversarial debiasing and SHAP</mark> then test for proxy discrimination, lifting disparate impact from 0.59 to 0.94 at ~73.2% accuracy.</p>
 
               <figure class="fig">
                 <div class="plot" role="img" aria-label="Relative probability of entering the credit market. Male-headed households: 1.00. Female-headed households: 0.59, below the 0.8 four-fifths threshold.">
@@ -208,7 +208,7 @@
                   <div class="row key"><span class="lab">Female-headed, before debiasing</span><span class="track"><i class="dot" style="--x:.59"></i><b class="val left" style="--x:.59">0.59</b></span></div>
                   <div class="row axis"><span class="lab">relative P(entry)</span><span class="track"><i style="--x:0">0</i><i style="--x:.25">.25</i><i style="--x:.5">.50</i><i style="--x:.75">.75</i><i style="--x:1">1</i></span></div>
                 </div>
-                <figcaption>Measured baseline: probability of entering the credit market relative to male-headed households. <mark data-for="research product">A disparate impact of 0.59</mark>, well below the conventional 0.8 threshold. Adversarial debiasing closes most of that gap, at ~73.2% accuracy.</figcaption>
+                <figcaption>Measured baseline: probability of entering the credit market relative to male-headed households. <mark data-for="research product">A disparate impact of 0.59</mark>, well below the conventional 0.8 threshold. Adversarial debiasing lifts it to 0.94, at ~73.2% accuracy.</figcaption>
               </figure>
 
               <p class="aside-p"><mark data-for="research">The audit states its own limits</mark>: self-reported survey data, the risk of collider bias, and SHAP as a diagnostic of the model rather than causal evidence.</p>
@@ -216,7 +216,7 @@
             <aside class="notes">
               <p class="note" data-for="research">Treats access as a selection problem before asking about allocation.</p>
               <p class="note" data-for="data">Stage 1 predicts market participation, stage 2 predicts formal vs. informal allocation.</p>
-              <p class="note" data-for="product">A 0.59 is the kind of number a lender or regulator has to act on.</p>
+              <p class="note" data-for="product">0.59 is the kind of number a lender or regulator has to act on; 0.94 after debiasing is the kind they can sign off.</p>
             </aside>
           </article>
 
