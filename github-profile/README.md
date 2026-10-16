@@ -8,7 +8,7 @@ I build AI that can be audited, measured, and shipped. AI Consultant at **Kalpa 
 
 | Project | What it does |
 |---|---|
-| [Inverse-Objective Regulator](https://github.com/aakash2410/Inverse-Objective-Regulator) | Black-box auditor that infers a deployed AI agent's revealed objective from tool-call traces via Bayesian IRL. Open 8-agent benchmark; accompanying working paper (sole author). |
+| [Inverse-Objective Regulator](https://github.com/aakash2410/Inverse-Objective-Regulator) | Black-box auditor that infers a deployed AI agent's revealed objective from tool-call traces via Bayesian IRL. Open 8-agent benchmark; accompanying paper draft, not yet on arXiv (sole author). |
 | [rag-compliance-auditor](https://github.com/aakash2410/MCP_RAG_Compliance) | MCP server on PyPI that audits RAG and AI pipelines against the EU AI Act, GDPR/DPDP, HIPAA, SEBI/RBI, and NIST AI RMF. Runs as a CI/CD gate with SARIF. |
 | [Credit Equity Audit of India](https://github.com/aakash2410/CreditAudit-India) | Two-stage fairness audit of household credit access on NSSO 77th Round data, with AIF360 debiasing and SHAP. |
 

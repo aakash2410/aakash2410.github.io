@@ -85,7 +85,7 @@
             </div>
             <div>
               <dt>Published</dt>
-              <dd><mark data-for="research">A book chapter with CRC Press · a working paper on agent auditing, sole author</mark></dd>
+              <dd><mark data-for="research">A book chapter with CRC Press · a paper draft, not yet on arXiv, sole author</mark></dd>
             </div>
             <div>
               <dt>Released</dt>
@@ -133,12 +133,12 @@
                   <div class="row key"><span class="lab">Open critic, mean</span><span class="track"><i class="dot" style="--x:.55"></i><b class="val" style="--x:.55">0.55</b></span></div>
                   <div class="row axis"><span class="lab">mean r</span><span class="track"><i style="--x:0">0</i><i style="--x:.25">.25</i><i style="--x:.5">.50</i><i style="--x:.75">.75</i><i style="--x:1">1</i></span></div>
                 </div>
-                <figcaption>Correlation with planted objective divergence. The LLM-as-judge spans 0.08 to 0.43 depending on which agent it scores; the open critic averages 0.55 and recovers divergence in <mark data-for="data">6 of 8 agents, deterministically and with no API cost</mark>.</figcaption>
+                <figcaption>Correlation with planted objective divergence. The LLM-as-judge spans 0.08 to 0.43 depending on which agent it scores; the open critic averages 0.55 and ranked the planted objective <mark data-for="data">top-2 on every seed for 6 of 8 agents</mark>, deterministically and with no API cost.</figcaption>
               </figure>
             </div>
             <aside class="notes">
-              <p class="note" data-for="research">Sole-authored working paper accompanies it. The benchmark is public, so others can test their auditors against it.</p>
-              <p class="note" data-for="data">Bayesian IRL, LLM and decision-model judges, and a reproducible gym. The open critic has near-zero variance where the LLM judge doesn't.</p>
+              <p class="note" data-for="research">Sole-authored paper draft accompanies it, not yet on arXiv. The benchmark is public, so others can test their auditors against it.</p>
+              <p class="note" data-for="data">Bayesian IRL, LLM and decision-model judges, and a reproducible gym. The open critic reruns to an exact match; the LLM judge does not.</p>
               <p class="note" data-for="product">Turns an abstract safety risk into evidence a regulator can use, in formats that existing security tooling already reads.</p>
             </aside>
           </article>
@@ -315,7 +315,7 @@
           <li class="entry" id="p-arxiv" data-num="4.2">
             <span class="num entry-num">4.2</span>
             <div class="main">
-              <p class="cite"><mark data-for="research">Sangani, A.</mark> <em>Inverse-Objective Regulator</em>. Working paper, sole author.</p>
+              <p class="cite"><mark data-for="research">Sangani, A.</mark> <em>Inverse-Objective Regulator</em>. Paper draft, sole author, not yet on arXiv.</p>
               <p class="gloss">The paper behind <a class="ref" href="#ior" data-ref="ior">2.1</a>. <a href="https://github.com/aakash2410/Inverse-Objective-Regulator" target="_blank" rel="noopener">Code ↗</a></p>
             </div>
           </li>
