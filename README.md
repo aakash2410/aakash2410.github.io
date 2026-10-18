@@ -10,6 +10,12 @@ The page is printed as a three-plate job. Each reader is an ink plate: **Researc
 
 Plain HTML, CSS, and JavaScript. No build step.
 
+## House style
+
+British English throughout (`-ise`, `-isation`, `colour`, `per cent` in prose and `%` in figures). Two exceptions: quoted titles keep their published spelling — the CRC Press chapter is "Unusual social media behavior detection" — and CSS properties stay American (`color`, `grayscale`).
+
+The work section is written in an analytic register: name the conventional framing, say what it misses, then give the mechanism and the measured result. The hero and the contact section are first person and plainer.
+
 ## Editing
 
 - **Highlights:** wrap a phrase in `<mark data-for="research data">…</mark>`. It is highlighted only for the readers listed.
