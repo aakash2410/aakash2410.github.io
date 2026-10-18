@@ -170,7 +170,7 @@ body[data-lens="product"]  mark[data-for~="product"] { background-size: 100% 2px
 .toc { position: sticky; top: calc(var(--bar-h) + 36px); align-self: start; padding-top: 58px; }
 .toc-head, .runhead, .meta, .sec-sub, .note, .note-actions, .lab, .val, .spec dd,
 .grades, .colophon, .ref, .links, .proof dt, .proof-note, .tenure, .org, .num, .entry-num,
-figcaption::before, .ix-group h4 {
+figcaption::before {
   font-family: var(--mono);
 }
 .toc-head { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
@@ -374,16 +374,7 @@ figcaption::before {
 .grades td:nth-child(2) { width: 44px; font-weight: 500; }
 .grades td:last-child { width: 36px; text-align: right; color: var(--ink-3); }
 
-/* ---------- Index ---------- */
-.index { grid-column: 2 / 4; columns: 3; column-gap: 36px; }
-.ix-group { break-inside: avoid; margin-bottom: 24px; }
-.ix-group h4 {
-  font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 10px;
-  display: inline-block; color: var(--ink-3); padding: 0;
-}
-
-.ix-group ul { list-style: none; margin: 0; padding: 0; }
-.ix-group li { font-size: 13.5px; line-height: 1.45; padding-left: 1em; text-indent: -1em; margin-bottom: 6px; }
+/* ---------- Cross-references ---------- */
 .ref { font-size: 10px; color: var(--ink-3); text-decoration: none; margin-left: 3px; font-variant-numeric: tabular-nums; }
 .ref:hover { color: var(--ink); text-decoration: underline; }
 .ref.bumped { animation: bump .6s ease; }
@@ -464,7 +455,6 @@ figcaption::before {
   .hero > .notes { padding-top: 26px; }
   .proof { grid-template-columns: 1fr; gap: 20px; }
   #experience { --num-w: auto; }
-  .index { grid-column: 1; columns: 2; }
   .colophon { padding-left: 0; }
 }
 @media (max-width: 560px) {
@@ -475,7 +465,6 @@ figcaption::before {
   .spec { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .plot { --lw: 6.5rem; --gap: 10px; }
   .lab { font-size: 9.5px; }
-  .index { columns: 1; }
   .entry h3 { font-size: 23px; }
   .cta-row { gap: 14px; }
   .btn { box-shadow: 4px 4px 0 var(--mk); }

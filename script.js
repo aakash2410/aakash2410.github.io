@@ -25,7 +25,7 @@
   const marks = [...document.querySelectorAll("mark[data-for]")];
 
   // Reorder the work to suit the reader, animating each entry from its old
-  // position to its new one (FLIP), then renumber and fix index references.
+  // position to its new one (FLIP), then renumber and fix the cross-references.
   function reorder(lens, animate) {
     const key = "rank" + lens[0].toUpperCase() + lens.slice(1);
     const sorted = [...works].sort((a, b) => a.dataset[key] - b.dataset[key]);
