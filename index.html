@@ -73,7 +73,7 @@
             and started out as a product analyst at a fintech.
           </p>
           <p class="standfirst">
-            Away from the screen: Mumbai's street cats distract me constantly — the one below spent
+            Away from the screen: Mumbai's street cats distract me constantly, the one below spent
             an entire lunch negotiating for my keema, and I care more than is reasonable about this
             city's transport network. I'd like Mumbai to be walkable in my lifetime. (fingers crossed)
           </p>
@@ -129,8 +129,8 @@
             <div class="main">
               <h3>Inverse-Objective Regulator</h3>
               <p class="meta">Research system · Sole author · <a href="https://github.com/aakash2410/Inverse-Objective-Regulator" target="_blank" rel="noopener">Source ↗</a></p>
-              <p>A black-box auditor that works out what a deployed AI agent is <em>actually</em> optimising for, using only its tool-call traces. <mark data-for="research data">Bayesian inverse reinforcement learning</mark> recovers the agent's revealed objective and scores how far it drifts from its declared purpose. The output is <mark data-for="product">evidence a regulator can read</mark>, mapped to the EU AI Act, OWASP, MITRE ATLAS, and NIST AI RMF and emitted as JSON and SARIF.</p>
-              <p>It ships with <mark data-for="research">an open 8-agent benchmark</mark> of agentic failure modes: reward hacking, power-seeking, sycophancy, privacy leakage, and safety-skipping.</p>
+              <p>Governance of deployed agents rests almost entirely on declared purpose: a system card, an intended-use statement, a policy document. None of these constrain what an agent optimises for once it holds tools. The Inverse-Objective Regulator treats that question empirically. <mark data-for="research data">Bayesian inverse reinforcement learning</mark> recovers a revealed objective from tool-call traces alone, scores its divergence from the declared purpose, and emits the result as <mark data-for="product">evidence mapped to the EU AI Act, OWASP, MITRE ATLAS and NIST AI RMF</mark>, in JSON and SARIF, formats existing assurance pipelines already consume.</p>
+              <p>The accompanying <mark data-for="research">benchmark releases eight agents with planted failure modes</mark> — reward hacking, power-seeking, sycophancy, privacy leakage, safety-skipping — so that competing auditors can be assessed against a known ground truth rather than against one another's claims.</p>
 
               <figure class="fig">
                 <div class="plot" role="img" aria-label="Correlation with planted objective divergence across eight agents. Frontier LLM-as-judge ranges from 0.08 to 0.43 depending on the agent. Open cross-encoder critic: 0.55 mean.">
@@ -144,7 +144,7 @@
             <aside class="notes">
               <p class="note" data-for="research">Sole-authored paper draft accompanies it, not yet on arXiv. The benchmark is public, so others can test their auditors against it.</p>
               <p class="note" data-for="data">Bayesian IRL, LLM and decision-model judges, and a reproducible gym. The open critic reruns to an exact match; the LLM judge does not.</p>
-              <p class="note" data-for="product">Turns an abstract safety risk into evidence a regulator can use, in formats that existing security tooling already reads.</p>
+              <p class="note" data-for="product">Produces artefacts an assurance function can file, rather than a claim it has to take on trust.</p>
             </aside>
           </article>
 
@@ -154,8 +154,8 @@
             <div class="main">
               <h3>Suno Sutra</h3>
               <p class="meta">Digital India Bhashini (MeitY) × Current AI · Edge device · <a href="https://github.com/currentai-org/suno-sutra-hw" target="_blank" rel="noopener">Hardware ↗</a></p>
-              <p>An open-source handheld AI device that runs a vision model, Bhashini's speech recognition and translation, and text-to-speech <em>entirely offline</em>, across India's 22 official languages. No network to fall back on, three models on one small board, and RAM as the binding constraint.</p>
-              <p>I designed the <mark data-for="data">inference pipeline</mark>: how work is batched and scheduled across the three models under a hard RAM ceiling, and the <mark data-for="data product">benchmarking that drove those tradeoffs</mark>. Latency to first audio fell from about 8 seconds to 2–3, and peak memory by 40%, alongside the team’s INT8 conversion through ONNX.</p>
+              <p>Suno Sutra is an open-source handheld device built by Digital India Bhashini (MeitY) and Current AI. It runs a vision model, Bhashini's speech recognition and translation, and text-to-speech entirely on-device across India's 22 official languages, in settings where connectivity cannot be assumed. Three models share one small board, and memory rather than compute is the binding constraint.</p>
+              <p>I designed the <mark data-for="data">inference pipeline</mark> and owned the <mark data-for="data product">benchmarking that governed its tradeoffs</mark>. Stages overlap rather than execute in sequence; batching is applied only where it does not delay the first output chunk; model residency is scheduled against peak rather than average memory. Alongside the team's INT8 conversion through ONNX, latency to first audio fell from approximately eight seconds to two or three, and peak memory by 40 per cent.</p>
 
               <figure class="fig">
                 <div class="plot" role="img" aria-label="Latency to first audio before and after: about 8 seconds before, 2 to 3 seconds after.">
@@ -166,14 +166,14 @@
                 <figcaption>Latency to first audio on-device, before and after. <mark data-for="data">Peak memory down 40%</mark> over the same change.</figcaption>
               </figure>
 
-              <p>On top of the platform I built <b>The Specialist</b>: a grounded offline subject expert for teachers (<a href="https://github.com/aakash2410/SpecialistAISunoSutra" target="_blank" rel="noopener">Source ↗</a>). A teacher asks by voice or points the camera at a textbook page, and the device explains or simplifies it aloud in the local language, answering only from approved DIKSHA content. <mark data-for="research data">Two gates enforce that</mark>: retrieval refuses below a similarity threshold before an LLM call is spent, and the grounded prompt makes the model emit a no-answer signal that the pipeline turns into a refusal. Every answer it does give carries a citation down to chapter, section and page.</p>
-              <p>The embedder is multilingual-e5-small, with a <mark data-for="data">deterministic TF-IDF fallback</mark> fitted at build time so the loop runs with no neural model installed and the refusal threshold stays backend-aware. It deploys as a purely additive overlay: new files only, base platform untouched, installed by an Ansible role with a manifest of exactly what lands where. Content sits outside the code tree, so the syllabus refreshes during the device’s connectivity window alongside system updates, independently of the code. The DIKSHA harvester stays gated pending bulk-download and redistribution licensing.</p>
+              <p><b>The Specialist</b>, built on that platform, answers a teacher's question by voice or camera from approved DIKSHA curriculum content, aloud, in the local language (<a href="https://github.com/aakash2410/SpecialistAISunoSutra" target="_blank" rel="noopener">Source ↗</a>). A system that cannot be supervised in the classroom has to decline rather than improvise, so <mark data-for="research data">refusal is enforced at two points</mark>: retrieval declines below a similarity threshold before an inference call is spent, and the grounded prompt requires a no-answer signal that the pipeline converts into an explicit refusal. Every answer returned carries a citation to chapter, section and page.</p>
+              <p>The embedder is multilingual-e5-small with a <mark data-for="data">deterministic TF-IDF fallback</mark> fitted at build time, so the loop remains reproducible where the neural model is absent and the refusal threshold stays backend-aware. Deployment is an additive overlay installed by an Ansible role: no base file is modified, and content sits outside the code tree so the syllabus refreshes during the device's connectivity window, independently of the software. Harvesting of DIKSHA assets remains gated pending bulk-download and redistribution licensing.</p>
               <p>I also designed the evaluation framework for the <mark data-for="research product">VYOMA Innovation Challenge</mark> (₹80 lakh, run by Bhashini, Current AI and Kalpa Impact): the jury rubric, the use-case judging matrix, and the scoring thresholds, through to the finale at IIIT-Delhi.</p>
             </div>
             <aside class="notes">
               <p class="note" data-for="research">A system built to abstain: two refusal gates and a citation on every answer. Plus the scoring framework for a national innovation challenge.</p>
               <p class="note" data-for="data">Edge inference under a hard memory ceiling: batching tradeoffs, measured rather than guessed, and a deterministic embedder so the loop still runs when the neural one is absent.</p>
-              <p class="note" data-for="product">A government-backed device used in low-connectivity settings, where response time decides whether it gets used at all.</p>
+              <p class="note" data-for="product">Public deployment, where adoption is decided by response time and by whether the device admits what it does not know.</p>
             </aside>
           </article>
 
@@ -183,18 +183,18 @@
             <div class="main">
               <h3>rag-compliance-auditor</h3>
               <p class="meta">Open-source package on PyPI · Built solo · <a href="https://github.com/aakash2410/MCP_RAG_Compliance" target="_blank" rel="noopener">Source ↗</a> · <a href="https://pypi.org/project/rag-compliance-auditor/" target="_blank" rel="noopener">PyPI ↗</a></p>
-              <p>An MCP server that audits RAG and AI pipelines against the EU AI Act, GDPR/DPDP, HIPAA, SEBI/RBI, and NIST AI RMF, and issues signed audit reports. It <mark data-for="product">runs as a CI/CD gate</mark>, so the checks run on every build rather than once a year.</p>
+              <p>Compliance for retrieval systems is ordinarily assessed after deployment, at the level of documents, by reviewers who cannot inspect the pipeline. The timing is the problem: by the point of assessment the architecture is fixed and remediation is expensive. This MCP server moves the assessment into the development loop. It audits RAG and AI pipelines across seven dimensions against the EU AI Act, GDPR/DPDP, HIPAA, SEBI/RBI and NIST AI RMF, issues signed reports, and <mark data-for="product">reports through SARIF so a failed check fails a build</mark>.</p>
               <dl class="spec">
                 <div><dt>7</dt><dd>audit dimensions</dd></div>
                 <div><dt>8</dt><dd>MCP tools</dd></div>
-                <div><dt>RS256</dt><dd>signed JWT certificates</dd></div>
+                <div><dt>RS256</dt><dd>signed audit reports</dd></div>
                 <div><dt>SARIF</dt><dd>CI reporting</dd></div>
               </dl>
             </div>
             <aside class="notes">
-              <p class="note" data-for="research">Turns regulatory text into checks that can be run and reproduced.</p>
+              <p class="note" data-for="research">Regulatory text rendered as checks that can be executed and reproduced by a third party.</p>
               <p class="note" data-for="data">Packaged and published on PyPI; drops into existing pipelines without changes.</p>
-              <p class="note" data-for="product">Scoped, designed, built, and released by one person. Built to fit the pipelines teams already run.</p>
+              <p class="note" data-for="product">Scoped, built and released by one person, into the toolchain teams already operate.</p>
             </aside>
           </article>
 
@@ -204,7 +204,8 @@
             <div class="main">
               <h3>Credit Equity Audit of India</h3>
               <p class="meta">Independent fairness audit · NSSO 77th Round · <a href="https://github.com/aakash2410/CreditAudit-India" target="_blank" rel="noopener">Source ↗</a></p>
-              <p>Who gets credit in India, and on what terms? A <mark data-for="research data">two-stage, Heckman-style deep learning model</mark> separates <em>access</em> to the credit market from the <em>allocation</em> of formal versus informal credit among households already in it. <mark data-for="data">IBM AIF360 adversarial debiasing and SHAP</mark> then test for proxy discrimination, lifting disparate impact from 0.59 to 0.94 at ~73.2% accuracy.</p>
+              <p>Fairness audits of credit markets conventionally examine the terms offered to approved applicants. That framing conditions on selection. Households that never enter the market are absent from the sample, and a market which excludes them can be shown to treat its participants equitably. This audit separates the two questions: a <mark data-for="research data">two-stage, Heckman-style model</mark> estimates entry into the credit market, then the allocation of formal against informal credit among those already inside it.</p>
+              <p>On NSSO 77th Round data, female-headed households entered at approximately 59 per cent of the rate of male-headed households, a disparate impact of 0.59 against the conventional threshold of 0.8. <mark data-for="data">IBM AIF360 adversarial debiasing and SHAP</mark> were then applied to test for proxy discrimination; disparate impact rose to 0.94 at approximately 73.2 per cent accuracy.</p>
 
               <figure class="fig">
                 <div class="plot" role="img" aria-label="Relative probability of entering the credit market. Male-headed households: 1.00. Female-headed households: 0.59, below the 0.8 four-fifths threshold.">
@@ -216,12 +217,12 @@
                 <figcaption>Measured baseline: probability of entering the credit market relative to male-headed households. <mark data-for="research product">A disparate impact of 0.59</mark>, well below the conventional 0.8 threshold. Adversarial debiasing lifts it to 0.94, at ~73.2% accuracy.</figcaption>
               </figure>
 
-              <p class="aside-p"><mark data-for="research">The audit states its own limits</mark>: self-reported survey data, the risk of collider bias, and SHAP as a diagnostic of the model rather than causal evidence.</p>
+              <p class="aside-p"><mark data-for="research">The design’s limits are stated with the result</mark>: self-reported survey data, the risk of collider bias, and SHAP as a diagnostic of the model rather than causal evidence.</p>
             </div>
             <aside class="notes">
-              <p class="note" data-for="research">Treats access as a selection problem before asking about allocation.</p>
-              <p class="note" data-for="data">Stage 1 predicts market participation, stage 2 predicts formal vs. informal allocation.</p>
-              <p class="note" data-for="product">0.59 is the kind of number a lender or regulator has to act on; 0.94 after debiasing is the kind they can sign off.</p>
+              <p class="note" data-for="research">Access treated as a selection problem before allocation is examined at all.</p>
+              <p class="note" data-for="data">Stage one estimates participation; stage two estimates formal against informal allocation.</p>
+              <p class="note" data-for="product">0.59 obliges a lender or regulator to act; 0.94 is a figure an assurance function can sign off.</p>
             </aside>
           </article>
 
