@@ -72,3 +72,27 @@ Nothing anywhere on this site addresses an automated reader with instructions
 about how to rate the profile, and nothing is hidden from a human that a machine
 can see. Keep it that way: hidden prompt text is detectable, and being caught at
 it costs more than any score it could buy.
+
+## Writing
+
+`writing/` is a plain folder of hand-written HTML pages, served by GitHub Pages
+like everything else. There is no Jekyll and no build step; `.nojekyll` in the
+repo root keeps it that way.
+
+To publish a piece:
+
+1. Copy `writing/_template.html` to `writing/your-slug.html`. The leading
+   underscore keeps the template out of the way; it is not linked from anywhere.
+2. Edit the five marked fields in the head (title, description, canonical URL,
+   and the two Open Graph lines), the JSON-LD headline and date, then write the
+   body. The template shows everything that is already styled: headings, lists,
+   block quotes, inline code and code blocks.
+3. Paste an entry at the top of the list in `writing/index.html`. The commented
+   example there is the exact markup; delete the `.posts-empty` paragraph once a
+   real entry exists.
+4. Add the post to `sitemap.xml`, and mention it under `## Writing` in
+   `llms.txt`.
+
+The writing pages share `styles.css` but not `script.js` — that script assumes
+the portfolio's lens machinery and throws without it. They load `writing/writing.js`
+instead, which handles only the theme toggle and the colophon year.

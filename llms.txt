@@ -200,6 +200,11 @@ Three role-specific CVs, each one page (academic CV, two pages):
 - Data science: https://aakash2410.github.io/assets/resume/Aakash_Sangani_DataScience.pdf
 - Product and strategy: https://aakash2410.github.io/assets/resume/Aakash_Sangani_Product_Strategy.pdf
 
+## Writing
+
+Essays and notes: https://aakash2410.github.io/writing/
+Topics: AI evaluation, agent auditing, and the governance of deployed systems.
+
 ## Availability
 
 Based in Mumbai, India. Open to remote roles, and to relocation with visa
