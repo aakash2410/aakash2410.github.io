@@ -87,9 +87,8 @@ To publish a piece:
    and the two Open Graph lines), the JSON-LD headline and date, then write the
    body. The template shows everything that is already styled: headings, lists,
    block quotes, inline code and code blocks.
-3. Paste an entry at the top of the list in `writing/index.html`. The commented
-   example there is the exact markup; delete the `.posts-empty` paragraph once a
-   real entry exists.
+3. Copy the `.post-item` block at the top of `writing/index.html` and paste a
+   filled-in copy above it, newest first.
 4. Add the post to `sitemap.xml`, and mention it under `## Writing` in
    `llms.txt`.
 

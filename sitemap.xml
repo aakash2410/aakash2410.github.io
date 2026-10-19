@@ -13,6 +13,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aakash2410.github.io/writing/gating-without-grounding.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aakash2410.github.io/llms.txt</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>

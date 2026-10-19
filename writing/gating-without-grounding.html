@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gating without grounding — Aakash Sangani</title>
+  <meta name="description" content="Staged release is defended as a safety measure. It is also a governance model that trades a four-month capability window for permanent institutional dependency, and the literature advocating it rarely examines who bears that cost.">
+  <link rel="canonical" href="https://aakash2410.github.io/writing/gating-without-grounding.html">
+  <meta property="og:title" content="Gating without grounding">
+  <meta property="og:description" content="Staged release is defended as a safety measure. It is also a governance model that trades a four-month capability window for permanent institutional dependency.">
+  <meta name="author" content="Aakash Sangani">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aakash2410.github.io/writing/gating-without-grounding.html">
+  <meta property="article:author" content="Aakash Sangani">
+  <meta property="article:published_time" content="2026-10-19">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f4f1e6'/%3E%3Cg style='mix-blend-mode:multiply'%3E%3Ccircle cx='27' cy='26' r='16' fill='%23f5c31f'/%3E%3Ccircle cx='37' cy='30' r='16' fill='%231f4fd8'/%3E%3Ccircle cx='32' cy='38' r='16' fill='%23ff4d8d'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=20261019b">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Gating without grounding: staged release and the political economy of AI dependency",
+    "datePublished": "2026-10-19",
+    "description": "Staged release is defended as a safety measure. It is also a governance model that trades a four-month capability window for permanent institutional dependency, and the literature advocating it rarely examines who bears that cost.",
+    "inLanguage": "en-GB",
+    "wordCount": 1497,
+    "keywords": "AI governance, open weights, staged release, structured access, digital sovereignty, digital public infrastructure",
+    "author": { "@type": "Person", "name": "Aakash Sangani", "url": "https://aakash2410.github.io/" },
+    "mainEntityOfPage": "https://aakash2410.github.io/writing/gating-without-grounding.html"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar">
+    <div class="bar-inner">
+      <a class="bar-name" href="../">Aakash Sangani</a>
+      <div class="bar-tools">
+        <a class="cv" href="./">Writing</a>
+        <button class="theme" type="button" aria-label="Switch between light and dark">
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="10" cy="10" r="7.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 2.75a7.25 7.25 0 0 1 0 14.5Z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="doc">
+    <nav aria-label="Back">
+      <a class="back" href="./">← Writing</a>
+    </nav>
+
+    <main id="main">
+      <article class="post">
+        <h1>Gating without grounding</h1>
+        <p class="standfirst">Staged release and the political economy of AI dependency.</p>
+        <p class="meta">19 October 2026 · Aakash Sangani</p>
+
+        <p>Debates regarding the deployment of open-weight frontier models are frequently framed around a technical trade-off between safety and innovation. This framing conceals a political question. Who decides the conditions under which a sovereign state, a public institution or an independent researcher gets access to foundational computational tools? The paradigm of staged release, formulated systematically by Seger et al. (2023)<a class="fn" href="#ref-1" id="cite-1">1</a> and championed by frontier commercial developers such as Anthropic<a class="fn" href="#ref-4">4</a>, answers this question by centralising authority within the commercial entity that trains the system. This governance model trades a rapidly shrinking safety window for an enduring state of technical dependency. The literature that advocates these access controls rarely examines the communities that bear the cost of that dependency.</p>
+
+        <p>Seger et al.<a class="fn" href="#ref-1">1</a> define staged release as an operational pathway in which incrementally larger model iterations are released exclusively through hosted application programming interfaces (APIs). While the authors outline a broader catalogue of structured access, including vetted downloads, restricted research portals, and third-party red-teaming, every option presented governs the external communication layer rather than the computational asset itself. Whether interacting with a commercial API or a gated research portal, external parties cannot inspect weight matrices, fine-tune models on local datasets, use the responses to re-train other models, host architectures on domestic servers, or verify internal activations. The terms of access remain under the discretionary control of the developer, subject to unilateral modification, pricing changes, or outright revocation.</p>
+
+        <p>The technical case for these perimeter controls rests on documented failure modes. Post-hoc fine-tuning can strip safety guardrails for less than USD 0.20 in compute<a class="fn" href="#ref-5">5</a>, adversarial prompt suffixes transfer readily from open surrogate models to proprietary black-box systems<a class="fn" href="#ref-6">6</a>, and unvetted downstream software integrations can surface latent capabilities that developers never foresaw<a class="fn" href="#ref-1">1</a>. In policy declarations and legislative testimonies, frontier laboratories such as Anthropic have turned these vulnerabilities into a broader claim. Once weights for models with advanced biological or cyber capabilities proliferate, they argue, catastrophic tail risks can no longer be contained<a class="fn" href="#ref-4">4</a>. Their strongest technical argument rests on the irreversibility of open weights. As Seger et al.<a class="fn" href="#ref-1">1</a> observe, developers cannot recall or patch an open-weight model once it circulates publicly. Hosted access avoids this problem entirely by allowing developers to patch vulnerabilities server-side and revoke access keys without requiring downstream cooperation. A critique of access controls has to answer this point.</p>
+
+        <p>Restricting model access to a hosted interface, however, does not eliminate systemic risk for institutions that rely on external software<a class="fn" href="#ref-2">2</a>. For a public agency building civic infrastructure, the utility of a foundation model depends less on whether it holds the global frontier on capability benchmarks than on whether access remains stable, whether local regulators can audit internal processes during institutional failures, and whether domestic teams can adapt the system to local conditions. Structured access denies all three by design<a class="fn" href="#ref-1">1</a><span class="fn-sep">,</span><a class="fn" href="#ref-2">2</a>.</p>
+
+        <p>This access model carries a second cost, which is the loss of normative sovereignty. When an institution relies entirely on a closed API, it cannot retrain weights to reflect local linguistic registers, cultural conventions, or constitutional protections. Instead, dependent societies must import the moral baselines, safety definitions, and political judgments of a small cluster of developers in the United States<a class="fn" href="#ref-8">8</a>. In multilingual and socio-economically stratified contexts, these default guardrails frequently misclassify benign local expressions as toxic while failing to catch culturally specific vitriol. Gating stops domestic researchers from fixing these misalignments, so public institutions outside the United States end up importing a safety floor they never vetted.</p>
+
+        <p>Historical precedents in telecommunications, payment rails, and digital identity show the danger of ceding infrastructural control to external providers. Kenya and its implementation crises with the Huduma Namba and Maisha Namba digital identity systems illustrate how reliance on proprietary, foreign-supplied technical architectures produces vendor lock-in, legal vulnerability, and exclusion for millions of citizens<a class="fn" href="#ref-7">7</a>. When judicial rulings halted Maisha Namba due to data protection failures and the absence of independent verification, the state found itself constrained by foreign technical designs that local regulators could neither inspect nor reconfigure. A sovereign alternative would have paired access with domestic audit sandboxes, open protocol specifications, and independent bias benchmarks evaluated on representative civic data. Without these sovereign safeguards, whoever controls the underlying technical stack sets the legal and civic terms for everyone building on top of it.</p>
+
+        <p>Seger et al.<a class="fn" href="#ref-1">1</a> assess risk mainly at the level of the model, focusing on malicious use and the irreversible spread of system flaws, and leave institutions' capacity to adapt outside the analysis. Drawing on decolonial theory, Mohamed, Png and Isaac argue that centralised access models reproduce historical patterns of resource extraction and technical subordination<a class="fn" href="#ref-8">8</a>. Kilian argues that risk assessments should move from proximate operational threats to the institutional forces and power relations that shape how technology is adopted. Kilian's "inequality of control" shows that the concentration of model development within a small cluster of private corporations redistributes geopolitical leverage toward those firms<a class="fn" href="#ref-2">2</a>.</p>
+
+        <p>Empirical capability trends make this inequality of control increasingly difficult to justify. Epoch AI estimates that as of early 2026, leading open-weight architectures trailed proprietary frontier models by an average of four months, or roughly eight points on the Epoch Capabilities Index<a class="fn" href="#ref-3">3</a>. This variance is comparable to the gap between consecutive minor releases within a single model lineage. Seger et al.<a class="fn" href="#ref-1">1</a> concede this point even while arguing against open release. Frontier progress happens mainly inside well-resourced firms because those firms hold the capital, compute clusters, and proprietary datasets needed to push the frontier forward. Open-source distribution does not drive frontier advancement because external actors lack the computational resources to match that pace. Structured access controls merely manage the temporal lag between frontier discovery and public release, a margin that is now measured in months. Establishing an international governance norm that buys a four-month delay at the price of permanent institutional dependency prioritises a transient operational window over long-term structural autonomy.</p>
+
+        <p>Proponents of closed access argue that this four-month window is critical because catastrophic risks do not wait for parity. From this perspective, a brief buffer that prevents the proliferation of dangerous chemical, biological, or cyber capabilities outweighs abstract institutional friction<a class="fn" href="#ref-1">1</a><span class="fn-sep">,</span><a class="fn" href="#ref-4">4</a>. No appeal to digital sovereignty can implement a software recall on an open-weight model with dangerous capabilities. Yet dependency carries an equivalent form of irreversibility. Public administration systems constructed over multiple years upon proprietary foreign APIs cannot easily pivot when open alternatives reach parity. Civil service workflows, procurement pipelines, and public trust form around the proprietary systems available during initial deployment. By the time open parity arrives, institutional and enterprise lock-in is already complete. Kilian terms this dynamic a "deleterious feedback loop," wherein organisations make short-term adaptations under initial constraints that continue to dictate their choices long after technical conditions change<a class="fn" href="#ref-2">2</a>. Paternalistic calls to wait until commercial systems become safer impose compounding economic, administrative, and democratic costs on dependent states.</p>
+
+        <p>This dynamic helps explain the political pushback against corporate safety arguments. In regulatory debates across both the United States and international forums, critics increasingly characterise the safety justifications advanced by frontier laboratories as a form of regulatory capture<a class="fn" href="#ref-9">9</a><span class="fn-sep">,</span><a class="fn" href="#ref-10">10</a>. By lobbying for mandatory licensing regimes, compute thresholds, and restrictions on open weights under the banner of existential risk prevention, incumbent developers establish legal barriers that insulate their market position against open-source competition and smaller commercial rivals. Structured access turns commercial concentration of compute into an officially sanctioned regulatory monopoly, and in doing so widens the inequality of control.</p>
+
+        <p>This critique does not suggest that high-capability weights should be released indiscriminately without regard for catastrophic hazards. Seger et al.<a class="fn" href="#ref-1">1</a> present a rigorous case for oversight when severe, irreversible tail risks are plausible. This argument would fail if empirical capability gaps between proprietary frontiers and open architectures widened from months into multiple years through novel techniques rather than pure scale and compute, or if commercial developers proved that structured access regimes can provide non-revocable, sovereign audit rights that eliminate institutional lock-in. A governance framework still has to weigh two kinds of risk together. One is the misuse that access controls prevent; the other is the dependency those same controls impose on the institutions that rely on them.</p>
+
+        <p>Unilateral corporate gatekeeping should give way to enforceable multilateral standards that combine binding access guarantees, sovereign auditing rights and transparent empirical criteria requiring capability sharing as frontier gaps close. Multinational digital public infrastructure already works this way. MOSIP's core identity platform and eGov Foundation's DIGIT stack are built centrally, then adapted, deployed and audited by local implementation partners in each country that adopts them<a class="fn" href="#ref-11">11</a><span class="fn-sep">,</span><a class="fn" href="#ref-12">12</a>. AI access could follow the same pattern, with a central developer releasing monitored open weights that local vendors customise. Seger et al.<a class="fn" href="#ref-1">1</a> propose a multi-stakeholder body to oversee research access, but they restrict participation to academic investigators. Expanding this oversight model to include the sovereign states and public bodies that rely on foundational systems would be a necessary step toward reducing the structural risks of closed model governance<a class="fn" href="#ref-8">8</a>.</p>
+
+        <h2 id="references">References</h2>
+        <ol class="refs">
+          <li id="ref-1">Seger, E., Dreksler, N., Moulange, R., Dardaman, E., Schuett, J., Wei, K., Winter, C., Arnold, M., Korinek, A., Anderljung, M., Bucknall, B., Chan, A., Stafford, E., Koessler, L., Ovadya, A., Garfinkel, B., Bluemke, E., Aird, M., Levermore, P., … Biderman, S. (2023). Open-sourcing highly capable foundation models: An evaluation of risks, benefits, and alternative methods for pursuing open-source objectives. Centre for the Governance of AI. <a href="https://doi.org/10.48550/arXiv.2311.09227" target="_blank" rel="noopener">doi.org/10.48550/arXiv.2311.09227</a></li>
+          <li id="ref-2">Kilian, K. A. (2025). Beyond accidents and misuse: Decoding the structural risk dynamics of artificial intelligence. <em>AI &amp; Society.</em> <a href="https://doi.org/10.1007/s00146-025-02419-2" target="_blank" rel="noopener">doi.org/10.1007/s00146-025-02419-2</a></li>
+          <li id="ref-3">Edwards, J., &amp; Emberson, L. (2026). Open models lag state-of-the-art closed models by 4 months. Epoch AI. <a href="https://epoch.ai/data-insights/open-closed-eci-gap" target="_blank" rel="noopener">epoch.ai/data-insights/open-closed-eci-gap</a></li>
+          <li id="ref-4">Anthropic. (2023). Written testimony of Dario Amodei, Ph.D., to the United States Senate Committee on the Judiciary, Subcommittee on Privacy, Technology, and the Law. United States Senate. <a href="https://www.judiciary.senate.gov/download/2023-07-26-testimony-amodei" target="_blank" rel="noopener">judiciary.senate.gov</a>; see also Anthropic. (2024). Anthropic's responsible scaling policy, version 1.0. Anthropic PBC.</li>
+          <li id="ref-5">Qi, X., Zeng, Y., Xie, T., Chen, P. Y., Jia, R., Mittal, P., &amp; Henderson, P. (2023). Fine-tuning aligned language models compromises safety, even when users do not intend to! <em>arXiv preprint arXiv:2310.03693.</em> <a href="https://doi.org/10.48550/arXiv.2310.03693" target="_blank" rel="noopener">doi.org/10.48550/arXiv.2310.03693</a></li>
+          <li id="ref-6">Zou, A., Wang, Z., Kolter, J. Z., &amp; Fredrikson, M. (2023). Universal and transferable adversarial attacks on aligned language models. <em>arXiv preprint arXiv:2307.15043.</em> <a href="https://doi.org/10.48550/arXiv.2307.15043" target="_blank" rel="noopener">doi.org/10.48550/arXiv.2307.15043</a></li>
+          <li id="ref-7">Privacy International. (2020). Kenyan court ruling on Huduma Namba identity system: Lessons for digital identity. Privacy International; see also High Court of Kenya at Nairobi. (2023). Katiba Institute &amp; another v Attorney General &amp; 3 others, Constitutional Petition E473 of 2023.</li>
+          <li id="ref-8">Mohamed, S., Png, M. T., &amp; Isaac, W. (2020). Decolonial AI: Decolonial theory as sociotechnical foresight in artificial intelligence. <em>Philosophy &amp; Technology, 33</em>(4), 659–684. <a href="https://doi.org/10.1007/s13347-020-00405-8" target="_blank" rel="noopener">doi.org/10.1007/s13347-020-00405-8</a></li>
+          <li id="ref-9">Sacks, D. [@DavidSacks]. (2026, September 13). Dario has written that we need to "pace the frontier," and Sam has agreed… [Post]. X. <a href="https://x.com/DavidSacks/status/2098973625252708460" target="_blank" rel="noopener">x.com/DavidSacks</a></li>
+          <li id="ref-10">Federal Trade Commission. (2025). Staff report on AI partnerships &amp; investments: 6(b) study. Bureau of Competition, Office of Technology. <a href="https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-issues-staff-report-ai-partnerships-investments-study" target="_blank" rel="noopener">ftc.gov</a></li>
+          <li id="ref-11">MOSIP. (2024). Modular Open Source Identity Platform architecture and country adoption models. International Institute of Information Technology, Bangalore.</li>
+          <li id="ref-12">eGov Foundation. (2024). DIGIT open source platform for urban and governance transformation. eGov Foundation.</li>
+        </ol>
+
+        <div class="post-foot">
+          <p class="meta"><a href="./">← All writing</a> · <a href="../">Portfolio</a></p>
+        </div>
+      </article>
+
+      <footer class="colophon">
+        <p>Set in Archivo and DM Mono. Written by hand in HTML and CSS, no build step. © <span id="year">2026</span> Aakash Sangani.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="writing.js?v=20261019b"></script>
+</body>
+</html>

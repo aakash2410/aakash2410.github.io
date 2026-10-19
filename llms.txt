@@ -205,6 +205,18 @@ Three role-specific CVs, each one page (academic CV, two pages):
 Essays and notes: https://aakash2410.github.io/writing/
 Topics: AI evaluation, agent auditing, and the governance of deployed systems.
 
+"Gating without grounding: staged release and the political economy of AI
+dependency" (October 2026) --
+https://aakash2410.github.io/writing/gating-without-grounding.html
+Argues that structured access to frontier models is defended on safety grounds
+but functions as a governance choice: it buys a capability window measured in
+months, which Epoch AI put at roughly four, at the price of durable institutional
+dependency for the states and public bodies that build on those models. Engages
+Seger et al. (2023) on its strongest ground -- the irreversibility of open
+weights -- and argues that dependency carries its own irreversibility. Proposes
+multilateral access standards modelled on how MOSIP and DIGIT are adapted and
+audited locally. 1,497 words, 12 references.
+
 ## Availability
 
 Based in Mumbai, India. Open to remote roles, and to relocation with visa
