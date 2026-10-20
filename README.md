@@ -95,3 +95,25 @@ To publish a piece:
 The writing pages share `styles.css` but not `script.js` — that script assumes
 the portfolio's lens machinery and throws without it. They load `writing/writing.js`
 instead, which handles only the theme toggle and the colophon year.
+
+## Analytics
+
+`analytics.js` at the repo root loads GoatCounter on every page. It is off until
+you set your code:
+
+```js
+const GOATCOUNTER_CODE = "";   // "aakash" for https://aakash.goatcounter.com
+```
+
+With that empty, no script is fetched and nothing is counted, so the file is safe
+to leave in place unconfigured. Once set, it skips localhost and `file://` so
+local previews never pollute the figures, and it honours Do Not Track.
+
+Every page loads it with a root-relative `<script src="/analytics.js">`, which
+works from both `/` and `/writing/` because the site is served at the domain
+root. If this repo ever moves to a project page served from a subpath, those five
+tags need relative paths instead.
+
+GoatCounter sets no cookies and stores no personal data, so the site needs no
+consent banner. That is the reason to prefer it over GA4 here, beyond taste: a
+site arguing about data governance should not be running surveillance analytics.
