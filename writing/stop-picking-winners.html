@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stop picking winners — Aakash Sangani</title>
+  <meta name="description" content="India has solved the procurement problem for public compute. The harder question is whether GPU-hours can be reclaimed from teams that miss their milestones and moved to teams making progress, and who gets to decide what counts.">
+  <link rel="canonical" href="https://aakash2410.github.io/writing/stop-picking-winners.html">
+  <meta property="og:title" content="Stop picking winners">
+  <meta property="og:description" content="India has solved the procurement problem for public compute. The harder question is whether GPU-hours can be reclaimed from teams that miss their milestones and moved to teams making progress.">
+  <meta name="author" content="Aakash Sangani">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aakash2410.github.io/writing/stop-picking-winners.html">
+  <meta property="article:author" content="Aakash Sangani">
+  <meta property="article:published_time" content="2026-10-20">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f4f1e6'/%3E%3Cg style='mix-blend-mode:multiply'%3E%3Ccircle cx='27' cy='26' r='16' fill='%23f5c31f'/%3E%3Ccircle cx='37' cy='30' r='16' fill='%231f4fd8'/%3E%3Ccircle cx='32' cy='38' r='16' fill='%23ff4d8d'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=20261019b">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Stop picking winners: GPU utilisation as an efficiency problem",
+    "datePublished": "2026-10-20",
+    "description": "India has solved the procurement problem for public compute. The harder question is whether GPU-hours can be reclaimed from teams that miss their milestones and moved to teams making progress, and who gets to decide what counts.",
+    "inLanguage": "en-GB",
+    "keywords": "IndiaAI Mission, public compute, GPU allocation, NAIRR, reinforcement learning, multi-armed bandit, participatory governance, AI policy",
+    "author": { "@type": "Person", "name": "Aakash Sangani", "url": "https://aakash2410.github.io/" },
+    "mainEntityOfPage": "https://aakash2410.github.io/writing/stop-picking-winners.html"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar">
+    <div class="bar-inner">
+      <a class="bar-name" href="../">Aakash Sangani</a>
+      <div class="bar-tools">
+        <a class="cv" href="./">Writing</a>
+        <button class="theme" type="button" aria-label="Switch between light and dark">
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="10" cy="10" r="7.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 2.75a7.25 7.25 0 0 1 0 14.5Z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="doc">
+    <nav aria-label="Back">
+      <a class="back" href="./">← Writing</a>
+    </nav>
+
+    <main id="main">
+      <article class="post">
+        <h1>Stop picking winners</h1>
+        <p class="standfirst">GPU utilisation as an efficiency problem.</p>
+        <p class="meta">20 October 2026 · Aakash Sangani</p>
+
+        <p>In the United States, the National AI Research Resource (NAIRR) pilot connects researchers and educators with the computing power, data and training they need for AI research. Its <a href="https://nairrpilot.org/allocation-management-policy" target="_blank" rel="noopener">allocation management policy</a> lets the providers of that computing power take back what goes unused. If a project has touched none of its allocation after three months, the provider can cut it in half (by a quarter, if the project has made limited progress). After six months with no use at all, the provider can withdraw it entirely.</p>
+
+        <p>I read the policy as a response to two facts: nobody can tell in advance which projects will succeed, and compute is scarce while demand for them keeps growing. That raises a broader question. Can the same principle work for public research resources in general? India's compute programme is a good place to test it.</p>
+
+        <h2>India's compute programme</h2>
+
+        <p>The IndiaAI Mission set out to make <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092" target="_blank" rel="noopener">10,000 GPUs</a> available to Indian startups and researchers. It now has <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2298788" target="_blank" rel="noopener">more than 45,000</a>, offered at about <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092" target="_blank" rel="noopener">₹65 an hour</a>. By August 2026, <a href="https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2807_hKyI1X.pdf" target="_blank" rel="noopener">237 projects had been sanctioned 93.18 lakh GPU-hours</a> between them. The mission <a href="https://indiaai.gov.in/article/building-india-s-foundational-ai-models-indiaai-innovation-initiative" target="_blank" rel="noopener">received 506 proposals</a> to build Indian foundation models and is <a href="https://www.medianama.com/wp-content/uploads/2026/04/loksabhaquestions_annex_187_AU5417_haoHcv.pdf" target="_blank" rel="noopener">backing twelve organisations</a>, from Sarvam AI to BharatGen, an IIT Bombay-led consortium with ₹1,058.52 crore of support. The procurement problem is solved. The harder question now is how to make sure each GPU-hour goes where it does the most good.</p>
+
+        <p>Government grants in India already come in instalments, the Department of Science and Technology, for example, <a href="https://dst.gov.in/sites/default/files/Conditions-attached-to-the-Grant.pdf" target="_blank" rel="noopener">releases each one only after the previous one has been utilised or accounted for</a>. IndiaAI asked foundation-model applicants to <a href="https://indiaai.gov.in/article/indiaai-webinar-key-faqs-on-call-for-proposals-for-foundation-ai-models" target="_blank" rel="noopener">set out their own milestones, funding timelines and benchmarks</a>. This is where I see a flaw in this mechanism. When GPUs are scarce and the field is this competitive, a team that has to meet only its own targets and never compared against the team next to it will always win more compute. Nothing IndiaAI has published so far suggests that GPU-hours can be taken back into the central pool when a team misses those targets. Hence, each grant ends up as its own silo.</p>
+
+        <h2>Theory of change borrowed from hedge funds</h2>
+
+        <p>Millennium Management runs <a href="https://www.mlp.com" target="_blank" rel="noopener">more than 370 investment teams</a>, usually called pods. Each pod trades within its own risk limits, and fund profiles put the typical loss limit at <a href="https://altss.com/profile/millennium-management" target="_blank" rel="noopener">around 5% from peak</a>. Breach it and the pod's capital can be cut straight away. Pods that do well get more. Put to use as a theory of change for a public programme, if each instalment is judged against a common framework the funder sets, and teams are compared with each other and not only with their own plans. The money freed up by inefficient teams moves to faster ones under a publicly published formula, then resources reach the teams making progress sooner. Each rupee of subsidised compute buys more capability, and the public can see what it's getting.</p>
+
+        <p>The obvious objection to this is that a hedge fund can mark the prices every day, while model-training requires us to let it finish the run before any judgement can be made. A half-trained model doesn't provide any value. My answer is to move GPU allotments only between milestones and not mid-run. Government agencies across the world have already been doing this since years, on projects far more precarious than model training.</p>
+
+        <h2>Governments already do this</h2>
+
+        <p>In 2006, NASA backed two companies, SpaceX and Rocketplane Kistler, to build cargo spacecraft, and paid them as they hit milestones they had proposed themselves. In 2007, NASA <a href="https://iafastro.directory/iac/archive/browse/IAC-08/D2/2/2215/" target="_blank" rel="noopener">ended its agreement with Kistler</a> after the company missed a series of technical and financial milestones. The remaining $170 million went back to the central pool, and Orbital Sciences won it in 2008.</p>
+
+        <p>DARPA's AI Cyber Challenge asked teams to build AI systems that find and fix software bugs, and test them all on the same planted bugs. In the 2024 semifinal, teams <a href="https://darpa.mil/news/2025/aixcc-results" target="_blank" rel="noopener">found 37% of the bugs and fixed a quarter of those</a>. <a href="https://darpa.mil/news/2025/ai-cyber-challenge-winners-def-con-33" target="_blank" rel="noopener">Seven went through to the final</a>, where the figures rose to 86% and 68%.</p>
+
+        <p>Finally, India has its own versions of this mechanism. The Production Linked Incentive scheme for electronics pays manufacturers <a href="https://eparlib.nic.in/bitstream/123456789/1466393/1/AU1270.pdf" target="_blank" rel="noopener">4% to 6% of their extra sales</a> over a 2019-20 baseline. In Rajasthan, the <a href="https://www.educategirls.ngo/dib/" target="_blank" rel="noopener">Educate Girls impact bond</a> repaid its investor only after an independent evaluator, IDinsight, had <a href="https://www.brookings.edu/wp-content/uploads/2018/06/Presentation_Educate-Girls-Results_20180713.pdf" target="_blank" rel="noopener">checked the results</a>. It enrolled 768 out-of-school girls against a target of 662.</p>
+
+        <h2>A common mechanism to evaluate and allocate</h2>
+
+        <p>The theory of change still leaves one important question unanswered, who decides how the next round of compute is split, and on what basis? A committee can do it, but committees meet periodically and judge each case separately. A fixed rule, such as cutting any team that misses a target by a set margin, is consistent but cannot improve by itself. It applies the same thresholds in the tenth round as in the first, however much the programme has learned about which signals actually predict success. A committee could recalibrate the rule from time to time. I think it is worth exploring whether reinforcement learning could do that learning round by round, working out which allocation decisions lead to the most progress.</p>
+
+        <p>Though this approach can sound a bit technocratic, bear with me on why I think this might just be useful. The allocation problem requires repeated decisions to be made periodically. Each decision changes what information is available next. Every round forces a trade-off between backing the teams that look strongest and testing teams whose potential is still unknown. This is the class of problem reinforcement learning was built for. In plain terms, reinforcement learning is a method for making a sequence of decisions by trial and error: the system acts, observes the result, and adjusts its next decision towards what worked.</p>
+
+        <h2>How the allocator would work</h2>
+
+        <p>At the end of each round, the allocator looks at three things for every team: its latest score on a common evaluation, the share of its allotted compute utilised, and its remaining budget. It then proposes the split for the next round. It is judged on how much model quality improves per GPU-hour across the whole portfolio, with weights for public priorities, so that a Santali speech model is not compared with a Hindi chatbot on raw scores.</p>
+
+        <p>IndiaAI would build the tests in Indian languages and keep them private, so teams can't game the exams. A share of each round would be held back for teams whose results are still uncertain. Computer scientists call this the multi-armed bandit problem, after slot machines: a gambler who only ever plays the machine that has paid out most so far never learns whether another one pays better. In a public programme, the uncertain teams are often the ones working on smaller languages, with less resources, and an allocator with no budget for exploring would slowly starve them.</p>
+
+        <p>The allocator can be backtested against the available data. IndiaAI already has the portal data logs needed to simulate past rounds. The current milestone-based process, fixed instalments, and a learning allocator can be run side by side in simulation to see which converts subsidised compute into model quality fastest.</p>
+
+        <p>Any allocation rule changes how the people it funds behave. Reward improvement between rounds, and teams have a reason to hold back early so the next jump looks bigger. Reclaim unused compute, and teams have a reason to run low-value jobs just to keep their usage up. Score every language on the same scale, and teams will drift towards Hindi and English, where scores rise fastest. So the simulation has to include teams that try to beat each rule, and a rule should be adopted only once it has held up against them.</p>
+
+        <h2>Who decides what counts</h2>
+
+        <p>The strongest objection to this proposal is that it turns a political decision into code. Choosing how much weight a Santali model deserves, or whether an agricultural assistant should count for more than a legal one, is a political judgement. If those judgements are embedded in a reward function, the communities affected lose a clear way to contest them. James C. Scott's <em>Seeing Like a State</em> documents how often governments that manage only what they can measure end up harming the people they intend to serve.</p>
+
+        <p>The design principle should therefore be that the allocator handles the arithmetic and people set the values. That requires four safeguards.</p>
+
+        <p>The priority weights should be set publicly, each cycle, by a body that includes language communities, state governments and the funded teams. Participatory budgeting in Porto Alegre shows this can work at city scale: residents ranked investment needs in district assemblies and debated the rules for dividing funds between districts. <a href="https://documents.albankaldawli.org/curated/ar/600841468017069677/pdf/514180WP0BR0Bu10Box342027B01PUBLIC1.pdf" target="_blank" rel="noopener">A World Bank case study</a> reports participation rising from under 1,000 people a year to about 40,000 during the 1990s. The same study notes that the poorest residents were underrepresented, which an Indian version would need to address.</p>
+
+        <p>Communities should help build the evaluations. An evaluation for Santali written by people who do not speak Santali will consistently reward the wrong models. BHASHINI's <a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2022/aug/doc202282696201.pdf" target="_blank" rel="noopener">Bhasha Daan</a> already collects recordings, transcriptions and translations from citizens for an open dataset, and the same approach can produce and refresh the test sets. Every allocation decision should come with a stated reason and a route to appeal to a human panel with the power to override it. Overrides should be published. The EU's <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng" target="_blank" rel="noopener">GDPR, Article 22</a> gives individuals the right to human review of decisions made solely by automated means, and a public compute programme should meet that standard at least. A portion of each round should remain discretionary, for promising work that no evaluation was designed to recognise, and the pilot should be subject to a public review with the authority to end it.</p>
+
+        <h2>What to measure in the next phase</h2>
+
+        <p>IndiaAI's public reporting currently focuses on <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2298788" target="_blank" rel="noopener">GPUs onboarded and hours sanctioned</a>, which were the right measures while capacity was being built. The next phase needs output measures:</p>
+
+        <ul>
+          <li><b>Utilisation:</b> the share of allotted compute that is actually used.</li>
+          <li><b>Improvement per crore:</b> gains on the common evaluations for each rupee of subsidy.</li>
+          <li><b>Regret:</b> the gap between each allocation rule and the best possible allocation in hindsight, measured in simulation.</li>
+          <li><b>Coverage:</b> a minimum share of compute for smaller languages and use cases.</li>
+        </ul>
+
+        <p>It's fine if a reinforcement model is not the answer, but I believe these measurements used by a human committee that sets targets on these periodically can make incremental gains in GPU allocation efficiency.</p>
+
+        <div class="post-foot">
+          <p class="meta"><a href="./">← All writing</a> · <a href="../">Portfolio</a></p>
+        </div>
+      </article>
+
+      <footer class="colophon">
+        <p>Set in Archivo and DM Mono. Written by hand in HTML and CSS, no build step. © <span id="year">2026</span> Aakash Sangani.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="writing.js?v=20261019b"></script>
+</body>
+</html>

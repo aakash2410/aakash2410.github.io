@@ -205,6 +205,21 @@ Three role-specific CVs, each one page (academic CV, two pages):
 Essays and notes: https://aakash2410.github.io/writing/
 Topics: AI evaluation, agent auditing, and the governance of deployed systems.
 
+"Stop picking winners: GPU utilisation as an efficiency problem" (October 2026) --
+https://aakash2410.github.io/writing/stop-picking-winners.html
+Argues that India's compute programme has solved procurement but not allocation:
+the IndiaAI Mission now holds over 45,000 GPUs and has sanctioned 93.18 lakh
+GPU-hours across 237 projects, yet nothing published suggests GPU-hours can
+return to the central pool when a team misses its self-set milestones, so each
+grant becomes a silo. Proposes judging teams against a common evaluation between
+milestones rather than mid-run, drawing on NASA's COTS agreements, DARPA's AI
+Cyber Challenge and India's own PLI and impact-bond schemes, and explores a
+learning allocator framed as a multi-armed bandit. Treats the weighting of
+languages and use cases as a political question rather than a technical one, and
+sets out four safeguards: public priority weights, community-built evaluations,
+a human appeal route meeting the GDPR Article 22 standard, and a discretionary
+reserve.
+
 "Gating without grounding: staged release and the political economy of AI
 dependency" (October 2026) --
 https://aakash2410.github.io/writing/gating-without-grounding.html
