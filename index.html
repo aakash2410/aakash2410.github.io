@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261024a">
+  <link rel="stylesheet" href="styles.css?v=20261024b">
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <script type="application/ld+json">
 {
@@ -379,10 +379,10 @@
         </div>
 
         <aside class="notes">
-          <p class="note" data-for="all"><b>How to read this.</b> Pick a reader up in the bar, I will highlight the relevant text and sections for you to check out.</p>
+          <p class="note" data-for="all"><b>How to read this.</b> Pick a reader in the bar and I'll highlight what matters to them.</p>
           <p class="note" data-for="research"><b>You picked researcher.</b> What I'm chewing on: the revealed objectives of AI agents; algorithmic fairness in Indian credit markets; conformity assessment and incident reporting under the EU AI Act and California's SB-53.</p>
           <p class="note" data-for="data"><b>You picked data scientist.</b> Three-plus years across pharma analytics, fintech experimentation, and AI governance. Author of two open-source AI evaluation tools.</p>
-          <p class="note" data-for="product"><b>You picked product.</b> Owns requirements, product logic, and stakeholder work with government, multilateral, and Fortune&nbsp;100 clients. Led a team of four at ZS.</p>
+          <p class="note" data-for="product"><b>You picked product.</b> Requirements, product logic, and stakeholder work with government, multilateral and Fortune&nbsp;100 clients. Led a team of four at ZS.</p>
           <p class="note-actions">
             <button type="button" class="share" data-for="research data product">Copy link to this reading</button>
           </p>
@@ -407,7 +407,7 @@
             <div class="main">
               <h3>Inverse-Objective Regulator</h3>
               <p class="meta">Research system · Sole author · <a href="https://github.com/aakash2410/Inverse-Objective-Regulator" target="_blank" rel="noopener">Source ↗</a></p>
-              <p>Governance of deployed agents rests almost entirely on declared purpose: a system card, an intended-use statement, a policy document. None of these constrain what an agent optimises for once it holds tools. The Inverse-Objective Regulator treats that question empirically. <mark data-for="research data">Bayesian inverse reinforcement learning</mark> recovers a revealed objective from tool-call traces alone, scores its divergence from the declared purpose, and emits the result as <mark data-for="product">evidence mapped to the EU AI Act, OWASP, MITRE ATLAS and NIST AI RMF</mark>, in JSON and SARIF, formats existing assurance pipelines already consume.</p>
+              <p>Governance of deployed agents rests almost entirely on declared purpose: a system card, an intended-use statement, a policy document. None of these constrain what an agent optimises for once it holds tools. The Inverse-Objective Regulator treats that question empirically. <mark data-for="research data">Bayesian inverse reinforcement learning</mark> recovers a revealed objective from tool-call traces alone, scores its divergence from the declared purpose, and emits the result as <mark data-for="product">evidence mapped to the EU AI Act, OWASP, MITRE ATLAS and NIST AI RMF</mark>, in JSON and SARIF, formats assurance pipelines already consume.</p>
               <p>The accompanying <mark data-for="research">benchmark releases eight agents with planted failure modes</mark> — reward hacking, power-seeking, sycophancy, privacy leakage, safety-skipping — so that competing auditors can be assessed against a known ground truth rather than against one another's claims.</p>
 
               <figure class="fig">
@@ -422,7 +422,7 @@
             <aside class="notes">
               <p class="note" data-for="research">Sole-authored paper draft accompanies it, not yet on arXiv. The benchmark is public, so others can test their auditors against it.</p>
               <p class="note" data-for="data">Bayesian IRL, LLM and decision-model judges, and a reproducible gym. The open critic reruns to an exact match; the LLM judge does not.</p>
-              <p class="note" data-for="product">Produces artefacts an assurance function can file, rather than a claim it has to take on trust.</p>
+              <p class="note" data-for="product">Produces artefacts an assurance function can file.</p>
             </aside>
           </article>
 
@@ -450,7 +450,7 @@
             </div>
             <aside class="notes">
               <p class="note" data-for="research">A system built to abstain: two refusal gates and a citation on every answer. Plus the scoring framework for a national innovation challenge.</p>
-              <p class="note" data-for="data">Edge inference under a hard memory ceiling: batching tradeoffs, measured rather than guessed, and a deterministic embedder so the loop still runs when the neural one is absent.</p>
+              <p class="note" data-for="data">Edge inference under a hard memory ceiling: measured batching tradeoffs, and a deterministic embedder so the loop still runs when the neural one is absent.</p>
               <p class="note" data-for="product">Public deployment, where adoption is decided by response time and by whether the device admits what it does not know.</p>
             </aside>
           </article>
@@ -512,8 +512,8 @@
             <div class="main">
               <h3>Open-source contributions</h3>
               <p class="meta">mozilla.ai · <a href="https://github.com/mozilla-ai/any-llm" target="_blank" rel="noopener">any-llm ↗</a></p>
-              <p>A test suite that reads the developer's environment reports on the machine it ran on rather than on the code. Several provider unit tests in <em>any-llm</em> picked up exported base URLs, so a clean checkout could fail for reasons that had nothing to do with the change under test. <mark data-for="data research">The patch isolates those tests from the shell around them</mark> — the property that makes any evaluation worth running, which is that the result does not depend on who ran it (<a href="https://github.com/mozilla-ai/any-llm/pull/1516" target="_blank" rel="noopener">merged ↗</a>).</p>
-              <p>A second patch pages the Anthropic provider's model listing, which returned only the first page of results: two lines of fix, thirty-one of test (<a href="https://github.com/mozilla-ai/any-llm/pull/1523" target="_blank" rel="noopener">open ↗</a>).</p>
+              <p>Several provider unit tests in <em>any-llm</em> read exported base URLs from the developer's shell, so a clean checkout could fail for reasons unrelated to the change under test. <mark data-for="data research">The patch isolates them from the environment</mark> (<a href="https://github.com/mozilla-ai/any-llm/pull/1516" target="_blank" rel="noopener">merged ↗</a>).</p>
+              <p>A second patch pages the Anthropic provider's model listing, which returned only the first page: two lines of fix, thirty-one of test (<a href="https://github.com/mozilla-ai/any-llm/pull/1523" target="_blank" rel="noopener">open ↗</a>).</p>
             </div>
           </article>
 
@@ -553,7 +553,6 @@
               </ul>
             </div>
             <aside class="notes">
-              <p class="note" data-for="product">Also supports internal operations, hiring, and project delivery across engagements.</p>
               <p class="note" data-for="research">Policy work that feeds straight back into the research questions in §2.</p>
             </aside>
           </article>
@@ -693,7 +692,7 @@
     </main>
   </div>
 
-  <script src="script.js?v=20261024a"></script>
-  <script src="/analytics.js?v=20261024a"></script>
+  <script src="script.js?v=20261024b"></script>
+  <script src="/analytics.js?v=20261024b"></script>
 </body>
 </html>
