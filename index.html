@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261019b">
+  <link rel="stylesheet" href="styles.css?v=20261024a">
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <script type="application/ld+json">
 {
@@ -372,7 +372,7 @@
             </div>
             <div>
               <dt>Released</dt>
-              <dd><mark data-for="data">A compliance auditor on PyPI · an open 8-agent AI-safety benchmark · an agentic analytics product</mark></dd>
+              <dd><mark data-for="data">A compliance auditor on PyPI · an open 8-agent AI-safety benchmark · a patch merged into mozilla.ai's any-llm</mark></dd>
             </div>
           </dl>
           <p class="proof-note">Client work through Kalpa Impact and ZS Associates.</p>
@@ -507,8 +507,18 @@
         </div>
 
         <div class="entries tail">
-          <article class="entry" id="earlier" data-num="2.5">
+          <article class="entry" id="oss" data-num="2.5">
             <span class="num entry-num">2.5</span>
+            <div class="main">
+              <h3>Open-source contributions</h3>
+              <p class="meta">mozilla.ai · <a href="https://github.com/mozilla-ai/any-llm" target="_blank" rel="noopener">any-llm ↗</a></p>
+              <p>A test suite that reads the developer's environment reports on the machine it ran on rather than on the code. Several provider unit tests in <em>any-llm</em> picked up exported base URLs, so a clean checkout could fail for reasons that had nothing to do with the change under test. <mark data-for="data research">The patch isolates those tests from the shell around them</mark> — the property that makes any evaluation worth running, which is that the result does not depend on who ran it (<a href="https://github.com/mozilla-ai/any-llm/pull/1516" target="_blank" rel="noopener">merged ↗</a>).</p>
+              <p>A second patch pages the Anthropic provider's model listing, which returned only the first page of results: two lines of fix, thirty-one of test (<a href="https://github.com/mozilla-ai/any-llm/pull/1523" target="_blank" rel="noopener">open ↗</a>).</p>
+            </div>
+          </article>
+
+          <article class="entry" id="earlier" data-num="2.6">
+            <span class="num entry-num">2.6</span>
             <div class="main">
               <h3>Earlier work</h3>
               <p class="meta">University projects · 2022–23</p>
@@ -683,7 +693,7 @@
     </main>
   </div>
 
-  <script src="script.js?v=20261019b"></script>
-  <script src="/analytics.js?v=20261020a"></script>
+  <script src="script.js?v=20261024a"></script>
+  <script src="/analytics.js?v=20261024a"></script>
 </body>
 </html>

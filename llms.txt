@@ -127,6 +127,18 @@ approximately 73.2 per cent accuracy.
 Stated limits: self-reported survey data, the risk of collider bias, and SHAP as a
 diagnostic of the model rather than causal evidence.
 
+### Open-source contributions
+mozilla.ai's any-llm (https://github.com/mozilla-ai/any-llm)
+
+Merged: provider unit tests read the developer's environment, so a clean
+checkout of main could fail whenever a provider base URL happened to be
+exported. The patch isolates those tests from the surrounding shell
+(https://github.com/mozilla-ai/any-llm/pull/1516).
+
+Open: the Anthropic provider's model listing returned only the first page of a
+paged API. Two lines of fix, thirty-one of test
+(https://github.com/mozilla-ai/any-llm/pull/1523).
+
 ### Earlier work (university, 2022-23)
 Baby Cry Reason Detection: inferring why an infant is crying from audio alone.
 MFCC, spectral contrast and prosodic features over 457 samples, SMOTETomek for
