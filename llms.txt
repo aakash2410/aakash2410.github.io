@@ -34,7 +34,7 @@ Alliance, the Gates Foundation, and Co-Develop.
 - Verified edge-AI performance claims submitted to the Gates Foundation, and wrote
   the reference architecture for AI-enabled coordinated care over ABDM-connected
   health systems.
-- Built an internal RFP crawler with a scoring model that ranks incoming
+- Built an internal RFP crawler with a scoring model ranking incoming
   opportunities, rebuilt on free sources to run at near-zero cost.
 
 ## Selected work
@@ -93,7 +93,7 @@ deterministic TF-IDF fallback fitted at build time, so the loop stays reproducib
 where the neural model is absent. Deployment is an additive overlay installed by an
 Ansible role: no base file is modified, and content sits outside the code tree so
 the syllabus refreshes during the device's connectivity window. Packaged for
-deployment; harvesting of DIKSHA assets remains gated pending bulk-download and
+deployment; harvesting of DIKSHA assets stays gated pending bulk-download and
 redistribution licensing.
 
 ### 3. rag-compliance-auditor -- https://pypi.org/project/rag-compliance-auditor/

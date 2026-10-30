@@ -12,7 +12,7 @@ Plain HTML, CSS, and JavaScript. No build step.
 
 ## House style
 
-British English throughout (`-ise`, `-isation`, `colour`, `per cent` in prose and `%` in figures). Two exceptions: quoted titles keep their published spelling — the CRC Press chapter is "Unusual social media behavior detection" — and CSS properties stay American (`color`, `grayscale`).
+British English throughout (`-ise`, `-isation`, `colour`, `per cent` in prose and `%` in figures). Two exceptions: quoted titles keep their published spelling (the CRC Press chapter is "Unusual social media behavior detection"), and CSS properties stay American (`color`, `grayscale`).
 
 The work section is written in an analytic register: name the conventional framing, say what it misses, then give the mechanism and the measured result. The hero and the contact section are first person and plainer.
 
@@ -49,14 +49,14 @@ Three files exist so that a crawler, a search index or an LLM assessing the
 profile gets the whole picture in one fetch, rather than whatever the default
 reading view happens to show:
 
-- `llms.txt` — a complete plain-text version of the portfolio, including the
+- `llms.txt` is a complete plain-text version of the portfolio, including the
   material that the lens mechanism hides in any single view. Kept pure ASCII so
   that it survives a server which serves `text/plain` without a charset. Update it
   whenever the content of `index.html` changes; it is the file an automated reader
   is most likely to quote.
-- `robots.txt` — allows everything, and names the AI crawlers explicitly so there
+- `robots.txt` allows everything, and names the AI crawlers explicitly so there
   is no ambiguity. Points at the sitemap.
-- `sitemap.xml` — the page, `llms.txt`, and the three CVs. Update `lastmod` on a
+- `sitemap.xml` covers the page, `llms.txt`, and the three CVs. Update `lastmod` on a
   substantial edit.
 
 `index.html` also carries a schema.org JSON-LD `@graph` in the head: a `Person`
@@ -79,7 +79,7 @@ it costs more than any score it could buy.
 like everything else. There is no Jekyll and no build step; `.nojekyll` in the
 repo root keeps it that way.
 
-To publish a piece:
+Publish a piece like this:
 
 1. Copy `writing/_template.html` to `writing/your-slug.html`. The leading
    underscore keeps the template out of the way; it is not linked from anywhere.
@@ -92,7 +92,7 @@ To publish a piece:
 4. Add the post to `sitemap.xml`, and mention it under `## Writing` in
    `llms.txt`.
 
-The writing pages share `styles.css` but not `script.js` — that script assumes
+The writing pages share `styles.css` but not `script.js`. That script assumes
 the portfolio's lens machinery and throws without it. They load `writing/writing.js`
 instead, which handles only the theme toggle and the colophon year.
 
